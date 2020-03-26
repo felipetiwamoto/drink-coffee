@@ -1,9 +1,11 @@
 let express = require("express");
 let consign = require("consign");
+let cors = require("cors");
 
 let app = express();
 
 app.use(express.json());
+app.use(cors());
 
 consign()
     .include("./src/routes")

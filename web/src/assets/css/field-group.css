@@ -1,0 +1,34 @@
+.field-group {
+  margin-bottom: 20px;
+  color: #333333;
+  flex-direction: column-reverse;
+  display: flex; }
+  .field-group > .field {
+    min-height: 40px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    transition: 0.3s;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none; }
+    .field-group > .field:focus {
+      transition: 0.3s;
+      border-color: #ff1177; }
+      .field-group > .field:focus + label {
+        transition: 0.3s;
+        font-weight: bold;
+        color: #ff1177; }
+  .field-group > label {
+    font-size: 14px;
+    margin-bottom: 1px; }
+  .field-group > .callback {
+    font-size: 12px; }
+  .field-group.error > .field,
+  .field-group.error > label,
+  .field-group.error > .callback {
+    border-color: #ff1177;
+    color: #ff1177; }

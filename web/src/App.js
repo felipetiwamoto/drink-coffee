@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
+import "./assets/css/main.css";
+
 // Routes
 import Login from "./screens/Login";
 import MemberList from "./screens/Member/MemberList";

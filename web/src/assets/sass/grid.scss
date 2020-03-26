@@ -1,0 +1,96 @@
+$maxColumns: 12, 20;
+$gutters: 0, 15, 30, 60, 90;
+$sizes: xs, sm, md, lg, xl;
+
+.wg.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  > div[class*="col-xs-"],
+  > div[class*="col-sm-"],
+  > div[class*="col-md-"],
+  > div[class*="col-lg-"],
+  > div[class*="col-xl-"] {
+    flex-grow: 1;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing:border-box;
+  }
+}
+
+@mixin setResponsive($size, $type: col) {
+  @each $max in $maxColumns {
+    @for $i from 1 through $max {
+      > .#{$type}-#{$size}-#{$i}-#{$max} {
+        max-width: #{100% / $max * $i};
+        flex-basis: #{100% / $max * $i};
+      }
+    }
+  }
+}
+
+@media all and (max-width: 576px) {
+  .wg.grid {
+    @include setResponsive(xs);
+    @include setResponsive(xs, offset);
+    @include setResponsive(xs, push);
+    @include setResponsive(xs, order);
+  }
+}
+
+@media all and (min-width: 576px) {
+  .wg.grid {
+    @include setResponsive(xs);
+    @include setResponsive(xs, offset);
+    @include setResponsive(xs, push);
+    @include setResponsive(xs, order);
+    @include setResponsive(sm);
+    @include setResponsive(sm, offset);
+    @include setResponsive(sm, push);
+    @include setResponsive(sm, order);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .wg.grid {
+    @include setResponsive(md);
+    @include setResponsive(md, offset);
+    @include setResponsive(md, push);
+    @include setResponsive(md, order);
+  }
+}
+
+@media all and (min-width: 992px) {
+  .wg.grid {
+    @include setResponsive(lg);
+    @include setResponsive(lg, offset);
+    @include setResponsive(lg, push);
+    @include setResponsive(lg, order);
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .wg.grid {
+    @include setResponsive(xl);
+    @include setResponsive(xl, offset);
+    @include setResponsive(xl, push);
+    @include setResponsive(xl, order);
+  }
+}
+
+@each $gutter in $gutters {
+  .wg.grid.gutter-#{$gutter} {
+    margin-left: -$gutter + px;
+    margin-right: -$gutter + px;
+    > div[class*="col-xs-"],
+    > div[class*="col-sm-"],
+    > div[class*="col-md-"],
+    > div[class*="col-lg-"],
+    > div[class*="col-xl-"] {
+      padding-left: $gutter + px;
+      padding-right: $gutter + px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap";
+@import "theme";
+@import "grid.css";
+@import "field-group.css";
+@import "button.css";
+@import "login";
+
+*{
+    margin:0px;
+    padding:0px;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+    font-family:"Open Sans", sans-serif;
+}
+
+html, body{
+    overflow-x:hidden;
+    font-family:"Open Sans", sans-serif;
+}
+
+.container{
+    z-index:1;
+    max-width:1200px;
+    padding-left:15px;
+    padding-right:15px;
+    margin:0px auto;
+    box-sizing:content-box;
+    position:relative;
+}
+
+#header{
+    height:60px;
+    margin-bottom:30px;
+    background-color:$heavyGrey;
+}
+
+.product-group{
+    padding-top:30px;
+    padding-bottom:30px;
+    .title{
+        font-size:32px;
+        margin-bottom:0.8em;
+        color:$heavyGrey;
+        font-weight:bold;
+    }
+}
+
+.product{
+    width:100%;
+    height:220px;
+    border-radius:5px;
+    margin-bottom:30px;
+    box-shadow:0px 2px 5px $heavyGrey;
+    color:$heavyGrey;
+    overflow:hidden;
+
+    &__photo{
+        width:100%;
+        height:100px;
+        background-color:$heavyGrey;
+    }
+    &__actions{
+        padding:0px 5px;
+        height:0px;
+        margin-top:-20px;
+        margin-bottom:20px;
+        display:flex;
+        justify-content:space-between;
+    }
+    &__rate{
+        height:10px;
+        width:100px;
+        display:flex;
+        &__star{
+            svg path{
+                fill:#fff;
+            }
+        }
+    }
+    &__add{
+        width:40px;
+        height:40px;
+        border-radius:50px;
+        box-shadow:0px 2px 5px $black;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:$white;
+        cursor:pointer;
+    }
+    &__body{
+        padding:10px;
+        height:calc(100% - 100px);
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+    &__title{
+        
+    }
+    &__description{
+        font-size:12px;
+        margin:5px 0px;
+    }
+    &__bottom{
+        display:flex;
+        justify-content:flex-end;
+    }
+    &__price{
+        align-self:flex-end;
+    }
+}
