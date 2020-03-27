@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px; }
+  .wg.grid > .col,
   .wg.grid > div[class*="col-xs-"],
   .wg.grid > div[class*="col-sm-"],
   .wg.grid > div[class*="col-md-"],
@@ -13,6 +14,8 @@
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box; }
+  .wg.grid .col {
+    width: initial; }
 
 @media all and (max-width: 576px) {
   .wg.grid > .col-xs-1-12 {

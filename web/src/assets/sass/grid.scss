@@ -7,6 +7,7 @@ $sizes: xs, sm, md, lg, xl;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  > .col,
   > div[class*="col-xs-"],
   > div[class*="col-sm-"],
   > div[class*="col-md-"],
@@ -17,6 +18,9 @@ $sizes: xs, sm, md, lg, xl;
     padding-left: 15px;
     padding-right: 15px;
     box-sizing:border-box;
+  }
+  .col{
+      width:initial;
   }
 }
 

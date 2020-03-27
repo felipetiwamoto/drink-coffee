@@ -13,7 +13,7 @@ let TextField = (props) => {
             value: fieldValue,
             status: callback.status
         })
-    }, [callback, fieldValue]);
+    }, [callback]);
 
     let handleChange = (e) => {
         setFieldValue(e.target.value);

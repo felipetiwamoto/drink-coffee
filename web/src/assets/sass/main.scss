@@ -1,113 +1,236 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap";
 @import "theme";
+@import "flex";
 @import "grid.css";
 @import "field-group.css";
 @import "button.css";
 @import "login";
 
-*{
-    margin:0px;
-    padding:0px;
-    text-decoration:none;
-    list-style:none;
-    box-sizing:border-box;
-    font-family:"Open Sans", sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
-html, body{
-    overflow-x:hidden;
-    font-family:"Open Sans", sans-serif;
+html,
+body {
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
 }
 
-.container{
-    z-index:1;
-    max-width:1200px;
-    padding-left:15px;
-    padding-right:15px;
-    margin:0px auto;
-    box-sizing:content-box;
-    position:relative;
+.container {
+    z-index: 1;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+    position: relative;
 }
 
-#header{
-    height:60px;
-    margin-bottom:30px;
-    background-color:$heavyGrey;
-}
-
-.product-group{
-    padding-top:30px;
-    padding-bottom:30px;
-    .title{
-        font-size:32px;
-        margin-bottom:0.8em;
-        color:$heavyGrey;
-        font-weight:bold;
+.menu{
+    display:inline-flex;
+    flex-wrap:wrap;
+    margin-left:-5px;
+    margin-right:-5px;
+    &__item{
+        margin-left:5px;
+        margin-right:5px;
     }
-}
-
-.product{
-    width:100%;
-    height:220px;
-    border-radius:5px;
-    margin-bottom:30px;
-    box-shadow:0px 2px 5px $heavyGrey;
-    color:$heavyGrey;
-    overflow:hidden;
-
-    &__photo{
-        width:100%;
-        height:100px;
+    &__link{
+        min-height:30px;
+        padding:5px 15px;
+        border-radius:5px;
+        color:$white;
         background-color:$heavyGrey;
+        display:inline-flex;
     }
-    &__actions{
-        padding:0px 5px;
-        height:0px;
-        margin-top:-20px;
-        margin-bottom:20px;
-        display:flex;
-        justify-content:space-between;
+}
+
+#header {
+    height: 60px;
+    margin-bottom: 30px;
+    background-color: $heavyGrey;
+    .cart-link {
+        min-height: 60px;
+        font-weight: bold;
+        color: $white;
+        display: flex;
+        align-items: center;
     }
-    &__rate{
-        height:10px;
-        width:100px;
-        display:flex;
-        &__star{
-            svg path{
-                fill:#fff;
+}
+
+.callback {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    margin-top: -15px;
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    &__item {
+        margin-top: 15px;
+        top: 20px;
+        right: 20px;
+        padding: 5px 15px;
+        min-height: 40px;
+        max-width: 300px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 30px $mediumGrey;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: $white;
+        background-color: $heavyGrey;
+        cursor: pointer;
+    }
+    &__message {
+        margin: 0px;
+    }
+}
+
+.product-group {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .title {
+        font-size: 32px;
+        margin-bottom: 0.8em;
+        color: $heavyGrey;
+        font-weight: bold;
+    }
+}
+
+.product {
+    width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 5px $heavyGrey;
+    color: $heavyGrey;
+    overflow: hidden;
+
+    &__photo {
+        width: 100%;
+        height: 100px;
+        background-color: $heavyGrey;
+    }
+    &__actions {
+        padding: 0px 5px;
+        height: 0px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__rate {
+        height: 10px;
+        width: 100px;
+        display: flex;
+        &__star {
+            svg path {
+                fill: #fff;
             }
         }
     }
-    &__add{
-        width:40px;
-        height:40px;
-        border-radius:50px;
-        box-shadow:0px 2px 5px $black;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        background-color:$white;
-        cursor:pointer;
+    &__icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        box-shadow: 0px 2px 5px $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        cursor: pointer;
     }
-    &__body{
-        padding:10px;
-        height:calc(100% - 100px);
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
+    &__body {
+        padding: 10px;
+        height: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    &__title{
-        
+    &__title {
     }
-    &__description{
-        font-size:12px;
-        margin:5px 0px;
+    &__description {
+        font-size: 12px;
+        margin: 5px 0px;
     }
-    &__bottom{
-        display:flex;
-        justify-content:flex-end;
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
     }
-    &__price{
-        align-self:flex-end;
+    &__price {
+        align-self: flex-end;
+    }
+}
+
+.order {
+    width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 5px $heavyGrey;
+    color: $heavyGrey;
+    overflow: hidden;
+
+    &__photo {
+        width: 100%;
+        height: 100px;
+        background-color: $heavyGrey;
+    }
+    &__actions {
+        padding: 0px 5px;
+        height: 0px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__rate {
+        height: 10px;
+        width: 100px;
+        display: flex;
+        &__star {
+            svg path {
+                fill: #fff;
+            }
+        }
+    }
+    &__icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        box-shadow: 0px 2px 5px $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        cursor: pointer;
+    }
+    &__body {
+        padding: 10px;
+        height: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__title {
+    }
+    &__description {
+        font-size: 12px;
+        margin: 5px 0px;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__price {
+        align-self: flex-end;
     }
 }

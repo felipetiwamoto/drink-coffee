@@ -1,12 +1,18 @@
 import { createStore, combineReducers } from "redux";
 import logged from "./reducers/logged";
-import member from "./reducers/member";
+import members from "./reducers/members";
 import products from "./reducers/products";
+import carts from "./reducers/carts";
+import callbacks from "./reducers/callbacks";
+import orders from "./reducers/orders";
 
 let reducers = combineReducers({
     logged,
-    member,
+    members,
     products,
+    carts,
+    callbacks,
+    orders,
 });
 
 let store = createStore(reducers);

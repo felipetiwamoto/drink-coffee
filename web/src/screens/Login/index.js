@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { set_logged } from "./../../redux/actions/logged";
-import { set_products } from "./../../redux/actions/products";
 
 import TextField from "./../../components/TextField";
 import Axios from 'axios';

@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { set_products } from "./../../redux/actions/products";
 
+import Callback from "./../../components/Callback";
 import Header from "./../../components/Header";
+import Menu from "./../../components/Menu";
 import ProductCard from "./../../components/ProductCard";
 import Axios from 'axios';
 
@@ -12,6 +14,7 @@ let ProductList = (props) => {
     let dispatch = useDispatch();
 
     let products = useSelector((state) => (state.products));
+    let callbacks = useSelector((state) => (state.callbacks));
 
     let getProducts = async () => {
         let results = await Axios.get("http://localhost:3333/product");
@@ -34,7 +37,11 @@ let ProductList = (props) => {
 
     return (
         <div id="product-list">
+            <div className="callback">
+                {callbacks.length > 0 && callbacks.map((callback) => (<Callback key={callback._id} {...callback} />))}
+            </div>
             <Header />
+            <Menu />
             <div className="container">
                 <div className="product-group">
                     <h3 className="title">Sobremesas</h3>

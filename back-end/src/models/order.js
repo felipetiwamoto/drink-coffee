@@ -6,15 +6,19 @@ let db = new nedb({
 });
 
 module.exports.all = () => {
-    return [];
+    return new Promise((resolve, reject) => {
+        db.find({}).exec((error, data) => {
+            resolve(data);
+        })
+    })
 }
 
 module.exports.find = () => {
     return {};
 }
 
-module.exports.create = () => {
-    return {};
+module.exports.create = (body) => {
+    db.insert(body, (error, data) => (true));
 }
 
 module.exports.update = () => {

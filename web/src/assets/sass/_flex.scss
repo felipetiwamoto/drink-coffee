@@ -1,0 +1,41 @@
+.jc{
+    &s{
+        display:flex;
+        justify-content:flex-start;
+    }
+    &c{
+        display:flex;
+        justify-content:center;
+    }
+    &e{
+        display:flex;
+        justify-content:flex-end;
+    }
+    &sa{
+        display:flex;
+        justify-content:space-around;
+    }
+    &sb{
+        display:flex;
+        justify-content:space-between;
+    }
+    &se{
+        display:flex;
+        justify-content:space-evenly;
+    }
+}
+
+.ai{
+    &s{
+        display:flex;
+        align-items:flex-start;
+    }
+    &c{
+        display:flex;
+        align-items:center;
+    }
+    &e{
+        display:flex;
+        align-items:flex-end;
+    }
+}
