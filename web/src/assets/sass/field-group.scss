@@ -2,9 +2,11 @@
 
 .field-group{
     margin-bottom:20px;
+    width:100%;
     color:$heavyGrey;
     flex-direction:column-reverse;
     display:flex;
+    position:relative;
 
     > .field{
         min-height:40px;
@@ -37,6 +39,9 @@
 
     > .callback{
         font-size:12px;
+        position:absolute;
+        bottom:-16px;
+        left:0px;
     }
 
     &.error{

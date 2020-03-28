@@ -8,3 +8,5 @@ export let REMOVE_PRODUCT_FROM_CART = "REMOVE_PRODUCT_FROM_CART";
 export let ADD_ORDER = "ADD_ORDER";
 export let CLEAR_CART = "CLEAR_CART";
 export let SET_ORDERS = "SET_ORDERS";
+export let EDIT_ORDER = "EDIT_ORDER";
+export let SET_CART = "SET_CART";

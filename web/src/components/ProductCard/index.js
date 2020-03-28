@@ -13,7 +13,7 @@ let ProductCard = (props) => {
     let dispatch = useDispatch();
 
     let addProductToCart = () => {
-        dispatch(add_product_to_cart(props));
+        dispatch(add_product_to_cart(props.product));
         dispatch(set_callback({
             _id: Math.random(),
             status: "success",
@@ -22,7 +22,7 @@ let ProductCard = (props) => {
     }
 
     let removeProductFromCart = () => {
-        dispatch(remove_product_from_cart(props));
+        dispatch(remove_product_from_cart(props.product));
         dispatch(set_callback({
             _id: Math.random(),
             status: "success",
@@ -33,14 +33,14 @@ let ProductCard = (props) => {
     return (
         <div className="product">
             <div className="product__photo"></div>
-            <div className="product__actions">
-                <div className="product__rate">
+            <div className="product__actions jce">
+                {/* <div className="product__rate">
                     <div className="product__rate__star"><MdStar /></div>
                     <div className="product__rate__star"><MdStar /></div>
                     <div className="product__rate__star"><MdStar /></div>
                     <div className="product__rate__star"><MdStar /></div>
                     <div className="product__rate__star"><MdStar /></div>
-                </div>
+                </div> */}
                 {!props.inCart ?
                     <div className="product__icon" onClick={() => addProductToCart()}>
                         <FiPlus size="26px" />
@@ -52,11 +52,11 @@ let ProductCard = (props) => {
             </div>
             <div className="product__body">
                 <div className="product__top">
-                    <h5 className="product__title">{props.name}</h5>
-                    <p className="product__description">{props.description}</p>
+                    <h5 className="product__title">{props.product.name}</h5>
+                    <p className="product__description">{props.product.description}</p>
                 </div>
                 <div className="product__bottom">
-                    <h3 className="product__price">R$ {props.price}</h3>
+                    <h3 className="product__price">R$ {props.product.price}</h3>
                 </div>
             </div>
         </div>
@@ -65,11 +65,13 @@ let ProductCard = (props) => {
 }
 
 ProductCard.defaultProps = {
-    _id: null,
-    name: "",
-    description: "",
-    price: 0,
-    inCart: false
+    inCart: false,
+    product: {
+        _id: null,
+        name: "",
+        description: "",
+        price: 0,
+    }
 }
 
 export default ProductCard;

@@ -21,8 +21,8 @@ module.exports.create = (body) => {
     db.insert(body, (error, data) => (true));
 }
 
-module.exports.update = () => {
-    return {};
+module.exports.update = (_id, body) => {
+    db.update({ _id }, body, (error) => (true));
 }
 
 module.exports.delete = () => {

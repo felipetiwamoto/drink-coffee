@@ -30,7 +30,7 @@ let ProductList = (props) => {
 
         return results.map((product) => (
             <div key={product._id} className="col-md-3-12 col-sm-4-12 col-xs-6-12">
-                <ProductCard {...product} />
+                <ProductCard product={product} />
             </div>
         ))
     }

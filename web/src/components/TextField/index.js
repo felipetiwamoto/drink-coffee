@@ -5,15 +5,24 @@ let TextField = (props) => {
     let [fieldValue, setFieldValue] = useState("");
     let [callback, setCallback] = useState({
         message: "",
-        status: true
+        status: false
     });
 
     useEffect(() => {
+        setFieldValue(props.value);
+        handleBlur();
+    }, []);
+
+    useEffect(() => {
+        propsHandleBlur();
+    }, [callback]);
+
+    let propsHandleBlur = () => {
         props.onBlur(props.id, {
             value: fieldValue,
             status: callback.status
         })
-    }, [callback]);
+    }
 
     let handleChange = (e) => {
         setFieldValue(e.target.value);
@@ -30,7 +39,7 @@ let TextField = (props) => {
             setCallback({ message: "", status: true });
             return;
         }
-
+        
         if (fieldValue.length < 1 || fieldValue.trim() === "") {
             setCallback({
                 message: "Este campo é obrigatório!",
@@ -42,9 +51,9 @@ let TextField = (props) => {
         setCallback({ message: "", status: true });
     }
 
-    let checkMinLength = () => { return true; }
+    let checkMinLength = () => { return; }
 
-    let checkMaxLength = () => { return true; }
+    let checkMaxLength = () => { return; }
 
     return (
         <div className={`field-group ${props.className} ${!callback.status ? `error` : ``}`}>
@@ -69,6 +78,7 @@ TextField.defaultProps = {
     id: null,
     name: null,
     type: "text",
+    value: "",
     placeholder: null,
     label: null,
     className: "",

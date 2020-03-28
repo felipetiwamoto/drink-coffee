@@ -12,6 +12,7 @@ module.exports.create = (data) => {
 module.exports.find = (body) => {
     return new Promise((resolve, reject) => {
         db.findOne({ email: body.email }).exec((error, data) => {
+            delete data.password;
             resolve(data);
         })
     })

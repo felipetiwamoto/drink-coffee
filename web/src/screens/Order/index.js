@@ -26,9 +26,9 @@ let Order = (props) => {
     }, [])
 
     let getOrders = () => {
-        return orders.map((order) => (
-            <div key={order._id} className="col-md-3-12 col-sm-4-12 col-xs-6-12">
-                <OrderCard {...order} />
+        return orders.map((order, index) => (
+            <div key={index} className="col-md-3-12 col-sm-4-12 col-xs-6-12">
+                <OrderCard order={order} />
             </div>
         ))
     }

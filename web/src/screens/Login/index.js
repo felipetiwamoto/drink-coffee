@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { set_logged } from "./../../redux/actions/logged";
 
+import { set } from "./../../helpers";
+
 import TextField from "./../../components/TextField";
 import Axios from 'axios';
 
@@ -54,6 +56,7 @@ let Login = (props) => {
             return false;
         }
 
+        set("logged", logged);
         dispatch(set_logged(logged));
         history.push("/produtos");
     }
@@ -78,7 +81,7 @@ let Login = (props) => {
                 <div className="form-group">
                     <button
                         className="button button--primary"
-                        onClick={() => handleSubmit()}
+                        onClick={handleSubmit}
                     >Entrar
                     </button>
                 </div>

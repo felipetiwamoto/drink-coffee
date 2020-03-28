@@ -1,7 +1,6 @@
 module.exports.index = async (app, req, res) => {
     let model = app.src.models.order;
     let orders = await model.all();
-    console.log(orders);
     res.json(orders);
     res.status(200);
     res.end();
@@ -20,6 +19,9 @@ module.exports.store = (app, req, res) => {
 }
 
 module.exports.update = (app, req, res) => {
+    let model = app.src.models.order;
+    delete req.body._id;
+    model.update(req.params.id, req.body);
     res.status(200);
     res.end();
 }

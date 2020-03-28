@@ -1,4 +1,4 @@
-import { ADD_ORDER, SET_ORDERS } from "./types";
+import { ADD_ORDER, SET_ORDERS, EDIT_ORDER } from "./types";
 
 export let set_orders = (data) => {
     return {
@@ -10,6 +10,13 @@ export let set_orders = (data) => {
 export let add_order = (data) => {
     return {
         type: ADD_ORDER,
+        payload: data
+    }
+}
+
+export let edit_order = (data) => {
+    return {
+        type: EDIT_ORDER,
         payload: data
     }
 }

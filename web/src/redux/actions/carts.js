@@ -1,4 +1,4 @@
-import { ADD_PRODUCT_TO_CART, REMOVE_PRODUCT_FROM_CART, CLEAR_CART } from "./types";
+import { ADD_PRODUCT_TO_CART, SET_CART, REMOVE_PRODUCT_FROM_CART, CLEAR_CART } from "./types";
 
 export let add_product_to_cart = (data) => {
     return {
@@ -17,5 +17,12 @@ export let remove_product_from_cart = (data) => {
 export let clear_cart = () => {
     return {
         type: CLEAR_CART
+    }
+}
+
+export let set_cart = (data) => {
+    return {
+        type: SET_CART,
+        payload: data
     }
 }
