@@ -25,7 +25,11 @@ module.exports.index = async (app, req, res) => {
     res.end();
 }
 
-module.exports.show = (app, req, res) => {
+module.exports.show = async (app, req, res) => {
+    let model = app.src.models.product;
+    let product = await model.find(req.params.id);
+    delete product._id;
+    res.json(product);
     res.status(200);
     res.end();
 }
@@ -38,15 +42,17 @@ function randDecimal(min, max) {
     return (Math.random() * (max - min) + min).toFixed(2);
 }
 
-module.exports.store = (app, req, res) => {
-
-
-
+module.exports.store = async (app, req, res) => {
+    let model = app.src.models.product;
+    await model.create(req.body);
     res.status(200);
     res.end();
 }
 
-module.exports.update = (app, req, res) => {
+module.exports.update = async (app, req, res) => {
+    let model = app.src.models.product;
+    delete req.body._id;
+    model.update(req.params.id, req.body);
     res.status(200);
     res.end();
 }

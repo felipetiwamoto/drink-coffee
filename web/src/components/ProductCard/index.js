@@ -1,7 +1,8 @@
 import React from 'react';
 import { FiPlus } from 'react-icons/fi';
 import { FiMinus } from 'react-icons/fi';
-import { MdStar } from 'react-icons/md';
+import { Link } from "react-router-dom";
+// import { MdStar } from 'react-icons/md';
 
 import { add_product_to_cart, remove_product_from_cart } from "./../../redux/actions/carts";
 import { set_callback } from "./../../redux/actions/callbacks";
@@ -32,6 +33,7 @@ let ProductCard = (props) => {
 
     return (
         <div className="product">
+            {props.editable && <Link to={`/produtos/editar/${props.product._id}`} className="product__edit"></Link>}
             <div className="product__photo"></div>
             <div className="product__actions jce">
                 {/* <div className="product__rate">
@@ -66,6 +68,7 @@ let ProductCard = (props) => {
 
 ProductCard.defaultProps = {
     inCart: false,
+    editable: false,
     product: {
         _id: null,
         name: "",

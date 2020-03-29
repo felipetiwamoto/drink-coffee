@@ -8,9 +8,9 @@ import ProductCard from "./../../components/ProductCard";
 import { set_callback } from '../../redux/actions/callbacks';
 import { add_order, edit_order } from '../../redux/actions/orders';
 import { clear_cart } from '../../redux/actions/carts';
-import Axios from 'axios';
 import TextField from "./../../components/TextField";
-import { get } from "./../../helpers";
+// import { get } from "./../../helpers";
+import { api } from "./../../helpers";
 
 let Cart = (props) => {
 
@@ -18,7 +18,7 @@ let Cart = (props) => {
 
     let carts = useSelector((state) => (state.carts));
     let callbacks = useSelector((state) => (state.callbacks));
-    let logged = useSelector((state) => (state.logged));
+    // let logged = useSelector((state) => (state.logged));
 
     let [form, setForm] = useState({
         name: {
@@ -74,7 +74,7 @@ let Cart = (props) => {
             total: totalPrice
         };
 
-        await Axios.put(`http://localhost:3333/order/${carts._id}`, data);
+        await api.put(`/order/${carts._id}`, data);
 
         dispatch(edit_order(data));
         dispatch(clear_cart());
@@ -106,7 +106,7 @@ let Cart = (props) => {
             total: totalPrice
         };
 
-        await Axios.post("http://localhost:3333/order", data);
+        await api.post("/order", data);
 
         dispatch(add_order(data));
         dispatch(clear_cart());

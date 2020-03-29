@@ -7,7 +7,7 @@ let db = new nedb({
 
 module.exports.all = () => {
     return new Promise((resolve, reject) => {
-        db.find({}).exec((error, data) => {
+        db.find({ status: { $ne: "pago" }}).sort({ createdAt: -1 }).exec((error, data) => {
             resolve(data);
         })
     })
@@ -18,6 +18,7 @@ module.exports.find = () => {
 }
 
 module.exports.create = (body) => {
+    body.createdAt = new Date().getTime();
     db.insert(body, (error, data) => (true));
 }
 

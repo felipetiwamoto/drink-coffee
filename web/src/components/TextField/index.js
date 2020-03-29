@@ -11,18 +11,16 @@ let TextField = (props) => {
     useEffect(() => {
         setFieldValue(props.value);
         handleBlur();
-    }, []);
+        // eslint-disable-next-line
+    }, [props.value]);
 
     useEffect(() => {
-        propsHandleBlur();
-    }, [callback]);
-
-    let propsHandleBlur = () => {
         props.onBlur(props.id, {
             value: fieldValue,
             status: callback.status
         })
-    }
+        // eslint-disable-next-line
+    }, [callback]);
 
     let handleChange = (e) => {
         setFieldValue(e.target.value);

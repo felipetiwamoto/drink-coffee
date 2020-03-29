@@ -13,6 +13,9 @@ let Menu = (props) => {
                     <li className="menu__item">
                         <Link to="/pedidos" className="menu__link">Pedidos</Link>
                     </li>
+                    <li className="menu__item">
+                        <Link to="/carrinho" className="menu__link">Carrinho</Link>
+                    </li>
                 </ul>
             </div>
         </div>

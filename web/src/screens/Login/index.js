@@ -6,7 +6,7 @@ import { set_logged } from "./../../redux/actions/logged";
 import { set } from "./../../helpers";
 
 import TextField from "./../../components/TextField";
-import Axios from 'axios';
+import { api } from "./../../helpers";
 
 let Login = (props) => {
 
@@ -50,7 +50,7 @@ let Login = (props) => {
 
         let logged = {};
 
-        logged = await Axios.post("http://localhost:3333/member/login", { data })
+        logged = await api.post("/member/login", { data })
         logged = logged.data;
         if (!logged) {
             return false;

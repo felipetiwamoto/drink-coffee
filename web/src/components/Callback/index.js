@@ -8,6 +8,7 @@ let Callback = (props) => {
 
     useEffect(() => {
         setTimeout(() => dispatch(remove_callback(props)), props.timeout);
+        // eslint-disable-next-line
     }, []);
 
     return (

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { set_products } from "./../../redux/actions/products";
@@ -7,7 +8,7 @@ import Callback from "./../../components/Callback";
 import Header from "./../../components/Header";
 import Menu from "./../../components/Menu";
 import ProductCard from "./../../components/ProductCard";
-import Axios from 'axios';
+import { api } from "./../../helpers";
 
 let ProductList = (props) => {
 
@@ -16,13 +17,16 @@ let ProductList = (props) => {
     let products = useSelector((state) => (state.products));
     let callbacks = useSelector((state) => (state.callbacks));
 
+    let [productType, setProductType] = useState("Sobremesa");
+
     let getProducts = async () => {
-        let results = await Axios.get("http://localhost:3333/product");
+        let results = await api.get("/product");
         dispatch(set_products(results.data));
     }
 
     React.useEffect(() => {
         getProducts();
+        // eslint-disable-next-line
     }, [])
 
     let getProductByCategory = (category) => {
@@ -30,9 +34,21 @@ let ProductList = (props) => {
 
         return results.map((product) => (
             <div key={product._id} className="col-md-3-12 col-sm-4-12 col-xs-6-12">
-                <ProductCard product={product} />
+                <ProductCard editable product={product} />
             </div>
         ))
+    }
+
+    let getProductTypeMenu = (type) => {
+        return (
+            <li
+                onClick={() => setProductType(type)}
+                className={`
+                    product-type__item 
+                    ${productType === type ? "product-type__item--active" : ""}
+                `}
+            >{type}</li>
+        );
     }
 
     return (
@@ -44,27 +60,22 @@ let ProductList = (props) => {
             <Menu />
             <div className="container">
                 <div className="product-group">
-                    <h3 className="title">Sobremesas</h3>
-                    <div className="wg grid">
-                        {products.length > 0 && getProductByCategory("Sobremesa")}
+                    <div className="wg grid" id="title">
+                        <div className="col">
+                            <h3 className="title">Filtre por categoria:</h3>
+                            <ul className="product-type">
+                                {getProductTypeMenu("Sobremesa")}
+                                {getProductTypeMenu("Lanche")}
+                                {getProductTypeMenu("Salgado")}
+                                {getProductTypeMenu("Bebida")}
+                            </ul>
+                        </div>
+                        <div className="col-sm-3-12">
+                            <Link to="/produtos/novo" className="button">Novo Produto</Link>
+                        </div>
                     </div>
-                </div>
-                <div className="product-group">
-                    <h3 className="title">Bebidas</h3>
                     <div className="wg grid">
-                        {products.length > 0 && getProductByCategory("Bebida")}
-                    </div>
-                </div>
-                <div className="product-group">
-                    <h3 className="title">Lanches</h3>
-                    <div className="wg grid">
-                        {products.length > 0 && getProductByCategory("Lanche")}
-                    </div>
-                </div>
-                <div className="product-group">
-                    <h3 className="title">Salgados</h3>
-                    <div className="wg grid">
-                        {products.length > 0 && getProductByCategory("Salgado")}
+                        {products.length > 0 && getProductByCategory(productType)}
                     </div>
                 </div>
             </div>

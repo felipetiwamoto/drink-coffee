@@ -24,6 +24,7 @@ let set_cart = (state, payload) => {
 
 let remove_product_from_cart = (state, payload) => {
     let hasRemovedAlready = false;
+    // eslint-disable-next-line
     let newState =  { ...state }.products.filter((product) => {
         if((product._id !== payload._id) || hasRemovedAlready){
             return product;

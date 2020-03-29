@@ -13,16 +13,20 @@ module.exports.all = () => {
     })
 }
 
-module.exports.find = () => {
-    return {};
+module.exports.find = (_id) => {
+    return new Promise((resolve, reject) => {
+        db.findOne({ _id }).exec((error, data) => {
+            resolve(data);
+        })
+    })
 }
 
 module.exports.create = (body) => {
     db.insert(body, (error, data) => (true));
 }
 
-module.exports.update = () => {
-    return {};
+module.exports.update = (_id, body) => {
+    db.update({ _id }, body, (error) => (true));
 }
 
 module.exports.delete = () => {

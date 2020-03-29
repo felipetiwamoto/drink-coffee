@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { edit_order } from "./../../redux/actions/orders";
 import { set_cart } from "./../../redux/actions/carts";
-import Axios from 'axios';
+import { api } from "./../../helpers";
 
 let OrderCard = (props) => {
 
@@ -12,7 +12,7 @@ let OrderCard = (props) => {
     let dispatch = useDispatch();
 
     let changeStatus = async (status) => {
-        await Axios.put(`http://localhost:3333/order/${props.order._id}`, { ...props.order, status });
+        await api.put(`/order/${props.order._id}`, { ...props.order, status });
         dispatch(edit_order({ ...props.order, status }));
     }
 

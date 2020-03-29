@@ -7,7 +7,7 @@ import Callback from "./../../components/Callback";
 import Header from "./../../components/Header";
 import Menu from "./../../components/Menu";
 import OrderCard from "./../../components/OrderCard";
-import Axios from 'axios';
+import { api } from "./../../helpers";
 
 let Order = (props) => {
 
@@ -17,17 +17,20 @@ let Order = (props) => {
     let callbacks = useSelector((state) => (state.callbacks));
 
     let setOrders = async () => {
-        let results = await Axios.get("http://localhost:3333/order");
+        let results = await api.get("/order");
         dispatch(set_orders(results.data));
     }
 
     React.useEffect(() => {
         setOrders();
+        // eslint-disable-next-line
     }, [])
 
     let getOrders = () => {
-        return orders.map((order, index) => (
-            <div key={index} className="col-md-3-12 col-sm-4-12 col-xs-6-12">
+        let filtered = orders.filter((order, index) => (order.status !== "pago"));
+
+        return filtered.map((order, index) => (
+            <div key={index} className="col-lg-3-12 col-md-4-12 col-xs-6-12">
                 <OrderCard order={order} />
             </div>
         ))

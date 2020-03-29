@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 let Header = (props) => {
 
@@ -11,7 +10,6 @@ let Header = (props) => {
                         <div className="logo"></div>
                     </div>
                     <div className="col jce">
-                        <Link to="/carrinho" className="cart-link">Ir para carrinho</Link>
                     </div>
                 </div>
             </div>

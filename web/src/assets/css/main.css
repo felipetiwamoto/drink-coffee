@@ -118,6 +118,26 @@ h6 {
     background-color: #333333;
     display: inline-flex; }
 
+.product-type {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px; }
+  .product-type__item {
+    margin-left: 5px;
+    margin-right: 5px;
+    min-height: 30px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    color: #ffffff;
+    background-color: #333333;
+    display: inline-flex;
+    cursor: pointer; }
+    .product-type__item--active {
+      background-color: transparent;
+      color: #333333; }
+
 #header {
   height: 60px;
   margin-bottom: 30px;
@@ -162,9 +182,18 @@ h6 {
   height: 220px;
   border-radius: 5px;
   margin-bottom: 30px;
+  position: relative;
   box-shadow: 0px 2px 5px #333333;
   color: #333333;
   overflow: hidden; }
+  .product__edit {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #a9a9a9;
+    position: absolute;
+    top: 5px;
+    right: 5px; }
   .product__photo {
     width: 100%;
     height: 100px;
@@ -260,11 +289,13 @@ h6 {
     background-color: #333333 !important;
     color: #ffffff; }
   .order__status {
-    margin: 5px 0px 5px -10px;
-    display: inline-flex; }
+    margin: 5px 0px 0px -10px;
+    display: inline-flex;
+    flex-wrap: wrap; }
     .order__status__item {
       flex-grow: 1;
       margin-left: 10px;
+      margin-bottom: 5px;
       min-height: 20px;
       padding: 2px 8px;
       outline: none;
@@ -314,3 +345,14 @@ h6 {
     justify-content: flex-end; }
   .order__total {
     align-self: flex-end; }
+
+.product-group #title {
+  margin-bottom: 30px; }
+  .product-group #title > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+  .product-group #title > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
