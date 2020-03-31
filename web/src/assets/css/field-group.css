@@ -1,39 +1,37 @@
 .field-group {
-  margin-bottom: 20px;
-  width: 100%;
-  color: #333333;
-  flex-direction: column-reverse;
   display: flex;
-  position: relative; }
-  .field-group > .field {
+  flex-direction: column-reverse;
+  width: 100%;
+  margin-bottom: 10px; }
+  .field-group .field {
     min-height: 40px;
     border-radius: 5px;
     padding: 5px 15px;
-    font-size: 16px;
-    transition: 0.3s;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #b9b9b9;
     outline: none;
-    box-shadow: none;
-    box-sizing: border-box;
-    background-color: transparent;
-    outline: none; }
-    .field-group > .field:focus {
-      transition: 0.3s;
-      border-color: #ff1177; }
-      .field-group > .field:focus + label {
-        transition: 0.3s;
-        font-weight: bold;
-        color: #ff1177; }
-  .field-group > label {
+    box-shadow: none; }
+  .field-group label {
     font-size: 14px;
-    margin-bottom: 1px; }
-  .field-group > .callback {
-    font-size: 12px;
-    position: absolute;
-    bottom: -16px;
-    left: 0px; }
-  .field-group.error > .field,
-  .field-group.error > label,
-  .field-group.error > .callback {
-    border-color: #ff1177;
-    color: #ff1177; }
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .field-group label .callback {
+      font-size: 12px;
+      margin: 0px;
+      position: initial;
+      text-align: right; }
+  .field-group.error label {
+    color: #db2828; }
+  .field-group.error .field {
+    border-color: #db2828;
+    background-color: #db282830;
+    color: #db2828; }
+    .field-group.error .field::placeholder {
+      color: #db282899; }
+  .field-group.success label {
+    color: #21ba45; }
+  .field-group.success .field {
+    border-color: #21ba45;
+    background-color: #21ba4530;
+    color: #21ba45; }

@@ -5,20 +5,22 @@ let TextField = (props) => {
     let [fieldValue, setFieldValue] = useState("");
     let [callback, setCallback] = useState({
         message: "",
-        status: false
+        status: true
     });
 
     useEffect(() => {
-        setFieldValue(props.value);
-        handleBlur();
+        if (props.value) {
+            setFieldValue(props.value);
+            handleBlur();
+        }
         // eslint-disable-next-line
-    }, [props.value]);
+    }, [])
 
     useEffect(() => {
         props.onBlur(props.id, {
             value: fieldValue,
             status: callback.status
-        })
+        });
         // eslint-disable-next-line
     }, [callback]);
 
@@ -27,35 +29,58 @@ let TextField = (props) => {
     }
 
     let handleBlur = () => {
-        checkMandatory();
-        checkMinLength();
-        checkMaxLength();
+        if (!props.mandatory) {
+            setCallback({ message: "", status: true });
+            return true;
+        }
+        
+        if(!checkMandatory()){ return; };
+        if(!checkMinLength()){ return; };
+        if(!checkMaxLength()){ return; };
     }
 
     let checkMandatory = () => {
-        if (!props.mandatory) {
-            setCallback({ message: "", status: true });
-            return;
-        }
-        
         if (fieldValue.length < 1 || fieldValue.trim() === "") {
             setCallback({
                 message: "Este campo é obrigatório!",
                 status: false
             });
-            return;
+            return false;
         }
 
         setCallback({ message: "", status: true });
+        return true;
     }
 
-    let checkMinLength = () => { return; }
+    let checkMinLength = () => {
+        if (fieldValue.length < props.minLength) {
+            setCallback({
+                message: `Digite no máximo ${props.minLength} caracteres.`,
+                status: false
+            });
+            return false;
+        }
 
-    let checkMaxLength = () => { return; }
+        setCallback({ message: "", status: true });
+        return true;
+    }
+
+
+    let checkMaxLength = () => {
+        if (props.maxLength !== null && fieldValue.length > props.maxLength) {
+            setCallback({
+                message: `Digite no mínimo ${props.maxLength} caracteres.`,
+                status: false
+            });
+            return false;
+        }
+
+        setCallback({ message: "", status: true });
+        return true;
+    }
 
     return (
         <div className={`field-group ${props.className} ${!callback.status ? `error` : ``}`}>
-            <div className="callback">{!callback.status && callback.message}</div>
             <input
                 type={props.type}
                 className="field"
@@ -66,7 +91,10 @@ let TextField = (props) => {
                 onChange={(e) => handleChange(e)}
                 onBlur={() => handleBlur()}
             />
-            <label htmlFor={props.id}>{props.label}</label>
+            <label htmlFor={props.id}>
+                {props.label}
+                <div className="callback">{!callback.status && callback.message}</div>
+            </label>
         </div>
     );
 

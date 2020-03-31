@@ -1,19 +1,74 @@
-#login{
-    width:100vw;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    .form{
-        width:350px;
-        padding:50px;
-        border-radius:5px;
-        box-shadow:0px 2px 5px $heavyGrey;
-        &__title{
-            text-align:center;
-            font-size:32px;
-            margin-bottom:0.8em;
-            margin-top:0px;
+#page-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    .left {
+        padding: 100px 15px 100px 75px;
+        width: calc(100% - 500px);
+        background-image: linear-gradient(to right, $grey2, $grey4);
+        .image {
+            width: 100%;
+            height: 75vh;
+            background-image: url("./../images/page-login-left.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+    }
+    .right {
+        padding: 100px 75px 100px 15px;
+        width: 500px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background-color:$secondary;
+        .form {
+            width: 500px;
+            left: -100px;
+            border-radius: 10px;
+            padding: 50px;
+            // box-shadow: -30px -30px 50px -10px $secondary + 99, 30px 30px 50px -10px $secondary + 99;
+            background-color: $white;
+            position: relative;
+        }
+    }
+
+    @media all and (max-width: 992px) {
+        .left {
+            width: calc(100% - 150px);
+        }
+
+        .right {
+            width: 150px;
+            padding-right: 15px;
+            position: relative;
+
+            .form {
+                position: absolute;
+                left: initial;
+                right: 15px;
+                box-shadow: none;
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        .left {
+            display:none;
+        }
+        .right {
+            width: 100%;
+            padding:15px;
+            align-items:flex-start;
+            .form {
+                padding:0px;
+                border-radius:5px;
+                padding:15px;
+                width: 100%;
+                box-shadow:-15px -15px 20px -5px $grey9, 15px 15px 20px -5px $grey9;
+                position:initial;
+                background-color:$white;
+            }
         }
     }
 }

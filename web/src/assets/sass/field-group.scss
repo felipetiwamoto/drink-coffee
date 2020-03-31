@@ -1,55 +1,57 @@
 @import "theme";
 
 .field-group{
-    margin-bottom:20px;
-    width:100%;
-    color:$heavyGrey;
-    flex-direction:column-reverse;
     display:flex;
-    position:relative;
+    flex-direction:column-reverse;
+    width:100%;
+    margin-bottom:10px;
 
-    > .field{
+    .field{
         min-height:40px;
         border-radius:5px;
         padding:5px 15px;
-        font-size:16px;
-        transition:0.3s;
-        border:1px solid $lightGrey;
+        border:1px solid $grey4;
         outline:none;
         box-shadow:none;
-        box-sizing:border-box;
-        background-color:transparent;
-        outline:none;
+    }
 
-        &:focus{
-            transition:0.3s;
-            border-color:$primary;
-            + label{
-                transition:0.3s;
-                font-weight:bold;
-                color:$primary;
+    label{
+        font-size:14px;
+        margin-bottom:1px;
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-end;
+
+        .callback{
+            font-size:12px;
+            margin:0px;
+            position:initial;
+            text-align:right;
+        }
+    }
+
+    &.error{
+        label{
+            color:$error;
+        }
+        .field{
+            border-color:$error;
+            background-color:#{$error}30;
+            color:$error;
+            &::placeholder{
+                color:#{$error}99;
             }
         }
     }
 
-    > label{
-        font-size:14px;
-        margin-bottom:1px;
-    }
-
-    > .callback{
-        font-size:12px;
-        position:absolute;
-        bottom:-16px;
-        left:0px;
-    }
-
-    &.error{
-        > .field,
-        > label,
-        > .callback{
-            border-color:$primary;
-            color:$primary;
+    &.success{
+        label{
+            color:$success;
+        }
+        .field{
+            border-color:$success;
+            background-color:#{$success}30;
+            color:$success;  
         }
     }
 }
