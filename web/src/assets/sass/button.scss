@@ -35,6 +35,18 @@
         color:$white;
     }
 
+    &--error{
+        background-color:$error;
+        border-color:$error;
+        color:$white;
+    }
+
+    &--success{
+        background-color:$success;
+        border-color:$success;
+        color:$white;
+    }
+
     &--white{
         background-color:$white;
         border-color:$white;

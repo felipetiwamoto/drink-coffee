@@ -95,7 +95,14 @@ let Cart = (props) => {
             return;
         }
 
-        if (!formValidate()) { return; }
+        if (!formValidate()) { 
+            dispatch(set_callback({
+                _id: Math.random(),
+                status: "error",
+                message: "Preencha o campo Nome/Mesa."
+            }));
+            return; 
+        }
 
         let data = {
             status: "preparando",
@@ -118,43 +125,54 @@ let Cart = (props) => {
     }
 
     return (
-        <div id="product-list">
+        <div id="cart-list">
             <div className="callback">
                 {callbacks.length > 0 && callbacks.map((callback) => (<Callback key={callback._id} {...callback} />))}
             </div>
-            <Header />
-            <Menu />
             <div className="container">
                 <div className="wg grid">
-                    <div className="col">
-                        <h3>Total: R$ {totalPrice}</h3>
+                    <div className="col-md-3-12">
+                        <Menu />
                     </div>
-                    <div className="col-md-4-12 col-xs-6-12 jce aic">
-                        <TextField
-                            value={carts._id ? carts.member.name : ""}
-                            id="name"
-                            placeholder="Nome/Mesa"
-                            label="Nome/Mesa do cliente"
-                            onBlur={handleFieldChange}
-                        />
-                        {!carts._id ?
-                            <button className="button fluid" onClick={addOrder}>
-                                Adicionar pedido
-                            </button> :
-                            <button className="button fluid" onClick={editOrder}>
-                                Editar pedido
-                            </button>
-                        }
-                    </div>
-                </div>
-                <div className="wg grid">
-                    {carts.products.length > 0 &&
-                        carts.products.map((product, index) => (
-                            <div key={index} className="col-md-3-12 col-sm-4-12 col-xs-6-12">
-                                <ProductCard product={product} inCart />
+                    <div className="col-md-9-12 content">
+                        <div className="header">
+                            <div className="wg grid">
+                                <div className="col">
+                                    <div className="title">
+                                        <h3>Total: R$ {totalPrice}</h3>
+                                    </div>
+                                </div>
+                                <div className="col jce aie">
+                                    <TextField
+                                        value={carts._id ? carts.member.name : ""}
+                                        id="name"
+                                        placeholder="Nome/Mesa"
+                                        label="Nome/Mesa do cliente"
+                                        onBlur={handleFieldChange}
+                                    />
+                                    {!carts._id ?
+                                        <button className="button button--secondary" onClick={addOrder}>
+                                            Adicionar
+                                    </button> :
+                                        <button className="button button--secondary" onClick={editOrder}>
+                                            Editar
+                                    </button>
+                                    }
+                                </div>
                             </div>
-                        ))
-                    }
+                        </div>
+                        <div className="body">
+                            <div className="wg grid">
+                                {carts.products.length > 0 &&
+                                    carts.products.map((product, index) => (
+                                        <div key={index} className="col-md-4-12 col-xs-6-12">
+                                            <ProductCard product={product} inCart />
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -91,39 +91,42 @@ let ProductAdd = (props) => {
             <div className="callback">
                 {callbacks.length > 0 && callbacks.map((callback) => (<Callback key={callback._id} {...callback} />))}
             </div>
-            <Header />
-            <Menu />
             <div className="container">
-                <div className="product-group">
-                    <h3 className="title">Novo Produto</h3>
-                    <div className="wg grid">
-                        <div className="col-md-4-12">
-                            <TextField
-                                id="name"
-                                label="Nome do produto"
-                                placeholder="Ex: Bolo de morango"
-                                onBlur={handleFieldChange}
-                            />
-                            <TextField
-                                id="description"
-                                label="Descrição"
-                                placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
-                                onBlur={handleFieldChange}
-                            />
-                            <TextField
-                                id="price"
-                                label="Preço do produto"
-                                placeholder="Ex: 5.50"
-                                onBlur={handleFieldChange}
-                            />
-                            <TextField
-                                id="category"
-                                label="Categoria do produto"
-                                placeholder="Ex: Sobremesa, Lanche, Salgado ou Bebida"
-                                onBlur={handleFieldChange}
-                            />
-                            <div className="field-group">
-                                <button onClick={handleSubmit} type="button" className="button">Criar Produto</button>
+                <div className="wg grid">
+                    <div className="col-md-3-12">
+                        <Menu />
+                    </div>
+                    <div className="col content">
+                        <h3 className="title">Novo Produto</h3>
+                        <div className="wg grid">
+                            <div className="col-md-4-12">
+                                <TextField
+                                    id="name"
+                                    label="Nome do produto"
+                                    placeholder="Ex: Bolo de morango"
+                                    onBlur={handleFieldChange}
+                                />
+                                <TextField
+                                    id="description"
+                                    label="Descrição"
+                                    placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
+                                    onBlur={handleFieldChange}
+                                />
+                                <TextField
+                                    id="price"
+                                    label="Preço do produto"
+                                    placeholder="Ex: 5.50"
+                                    onBlur={handleFieldChange}
+                                />
+                                <TextField
+                                    id="category"
+                                    label="Categoria do produto"
+                                    placeholder="Ex: Sobremesa, Lanche, Salgado ou Bebida"
+                                    onBlur={handleFieldChange}
+                                />
+                                <div className="field-group">
+                                    <button onClick={handleSubmit} type="button" className="button">Criar Produto</button>
+                                </div>
                             </div>
                         </div>
                     </div>

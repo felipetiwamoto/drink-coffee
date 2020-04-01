@@ -24,6 +24,14 @@
     background-color: #4C4B63;
     border-color: #4C4B63;
     color: #ffffff; }
+  .button--error {
+    background-color: #db2828;
+    border-color: #db2828;
+    color: #ffffff; }
+  .button--success {
+    background-color: #21ba45;
+    border-color: #21ba45;
+    color: #ffffff; }
   .button--white {
     background-color: #ffffff;
     border-color: #ffffff;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiPlus } from 'react-icons/fi';
+import { FiPlus, FiEdit3 } from 'react-icons/fi';
 import { FiMinus } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 // import { MdStar } from 'react-icons/md';
@@ -33,32 +33,28 @@ let ProductCard = (props) => {
 
     return (
         <div className="product">
-            {props.editable && <Link to={`/produtos/editar/${props.product._id}`} className="product__edit"></Link>}
-            <div className="product__photo"></div>
-            <div className="product__actions jce">
-                {/* <div className="product__rate">
-                    <div className="product__rate__star"><MdStar /></div>
-                    <div className="product__rate__star"><MdStar /></div>
-                    <div className="product__rate__star"><MdStar /></div>
-                    <div className="product__rate__star"><MdStar /></div>
-                    <div className="product__rate__star"><MdStar /></div>
-                </div> */}
-                {!props.inCart ?
-                    <div className="product__icon" onClick={() => addProductToCart()}>
-                        <FiPlus size="26px" />
-                    </div> :
-                    <div className="product__icon" onClick={() => removeProductFromCart()}>
-                        <FiMinus size="26px" />
-                    </div>
-                }
-            </div>
             <div className="product__body">
                 <div className="product__top">
-                    <h5 className="product__title">{props.product.name}</h5>
+                    <div className="title">
+                        <h5 className="product__title" title={props.product.name}>{props.product.name}</h5>
+                        {props.editable &&
+                            <Link to={`/produtos/editar/${props.product._id}`} className="button-edit">
+                                <FiEdit3 />
+                            </Link>
+                        }
+                    </div>
                     <p className="product__description">{props.product.description}</p>
                 </div>
-                <div className="product__bottom">
-                    <h3 className="product__price">R$ {props.product.price}</h3>
+                <div className="product__actions">
+                    {!props.inCart ?
+                        <button className="button fluid button--secondary" onClick={() => addProductToCart()}>
+                            {/* <FiPlus size="26px" />  */}
+                             R$ {parseFloat(props.product.price).toFixed(2)}
+                        </button> :
+                        <button className="button fluid button--error" onClick={() => removeProductFromCart()}>
+                            Remover
+                        </button>
+                    }
                 </div>
             </div>
         </div>

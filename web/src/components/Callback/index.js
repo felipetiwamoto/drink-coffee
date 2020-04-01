@@ -12,7 +12,7 @@ let Callback = (props) => {
     }, []);
 
     return (
-        <div className="callback__item" onClick={() => dispatch(remove_callback(props))}>
+        <div className={`callback__item ${props.status}`} onClick={() => dispatch(remove_callback(props))}>
             <div className="callback__message">{props.message}</div>
         </div>
     );

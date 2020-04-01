@@ -30,24 +30,33 @@ let Order = (props) => {
         let filtered = orders.filter((order, index) => (order.status !== "pago"));
 
         return filtered.map((order, index) => (
-            <div key={index} className="col-lg-3-12 col-md-4-12 col-xs-6-12">
+            <div key={index} className="col-md-4-12 col-xs-6-12">
                 <OrderCard order={order} />
             </div>
         ))
     }
 
     return (
-        <div id="order-list">
+        <div id="cart-list">
             <div className="callback">
                 {callbacks.length > 0 && callbacks.map((callback) => (<Callback key={callback._id} {...callback} />))}
             </div>
-            <Header />
-            <Menu />
             <div className="container">
-                <div className="order-group">
-                    <h3 className="title">Pedidos</h3>
-                    <div className="wg grid">
-                        {orders.length > 0 && getOrders()}
+                <div className="wg grid">
+                    <div className="col-md-3-12">
+                        <Menu />
+                    </div>
+                    <div className="col-md-9-12 content">
+                        <div className="header">
+                            <div className="title">
+                                <h3>Pedidos</h3>
+                            </div>
+                        </div>
+                        <div className="body">
+                            <div className="wg grid">
+                                {orders.length > 0 && getOrders()}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

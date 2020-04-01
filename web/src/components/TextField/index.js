@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 let TextField = (props) => {
 
+    let [hasChanged, setHasChanged] = useState(false);
     let [fieldValue, setFieldValue] = useState("");
     let [callback, setCallback] = useState({
         message: "",
@@ -9,7 +10,7 @@ let TextField = (props) => {
     });
 
     useEffect(() => {
-        if (props.value) {
+        if (props.value && props.value.trim().length > 0) {
             setFieldValue(props.value);
             handleBlur();
         }
@@ -17,6 +18,11 @@ let TextField = (props) => {
     }, [])
 
     useEffect(() => {
+        if (!hasChanged) { 
+            setHasChanged(true);
+            return; 
+        }
+
         props.onBlur(props.id, {
             value: fieldValue,
             status: callback.status
@@ -33,10 +39,10 @@ let TextField = (props) => {
             setCallback({ message: "", status: true });
             return true;
         }
-        
-        if(!checkMandatory()){ return; };
-        if(!checkMinLength()){ return; };
-        if(!checkMaxLength()){ return; };
+
+        if (!checkMandatory()) { return; };
+        if (!checkMinLength()) { return; };
+        if (!checkMaxLength()) { return; };
     }
 
     let checkMandatory = () => {
