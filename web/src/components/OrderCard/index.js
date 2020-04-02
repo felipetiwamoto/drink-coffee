@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiEdit3 } from 'react-icons/fi';
 
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -37,12 +38,15 @@ let OrderCard = (props) => {
     return (
         <div className="order">
             <div className="order__top">
-                <h5 className="order__name" title={props.order.member.name}>{props.order.member.name}</h5>
-                {props.order.status !== "pago" &&
-                    <button type="button" onClick={() => editOrder()} className="button order__edit">editar</button>
-                }
+                <div className="title">
+                    <h5 className="order__title" title={props.order.member.name}>{props.order.member.name}</h5>
+                    <button type="button" className="button-edit" onClick={() => editOrder()}>
+                        <FiEdit3 />
+                    </button>
+                </div>
             </div>
-            {props.order.status !== "pago" &&
+            {
+                props.order.status !== "pago" &&
                 <div className="order__status">
                     {statusButton("preparando")}
                     {statusButton("comendo")}
@@ -63,7 +67,7 @@ let OrderCard = (props) => {
                 <span className="order__calc__title">Total:</span>
                 <span className="order__calc__total">R$ {props.order.total}</span>
             </div>
-        </div>
+        </div >
     );
 
 }

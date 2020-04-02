@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { set_callback } from "./../../redux/actions/callbacks";
 
 import Callback from "./../../components/Callback";
-import Header from "./../../components/Header";
 import Menu from "./../../components/Menu";
+import SelectField from "./../../components/SelectField";
 import TextField from "./../../components/TextField";
 
 import { api } from "./../../helpers";
@@ -49,9 +49,6 @@ let ProductEdit = (props) => {
         getProduct();
     }, [])
 
-    useEffect(() => {
-    }, [product])
-
     let handleFieldChange = (key, field) => {
         setForm({ ...form, [key]: field });
     }
@@ -69,7 +66,14 @@ let ProductEdit = (props) => {
     }
 
     let handleSubmit = async () => {
-        if (!formValidate()) { return; }
+        if (!formValidate()) {
+            dispatch(set_callback({
+                _id: Math.random(),
+                status: "error",
+                message: "Preenche o formulário corretamente."
+            }));
+            return;
+        }
 
         let data = {
             name: form.name.value,
@@ -106,47 +110,56 @@ let ProductEdit = (props) => {
     }
 
     return (
-        <div id="product-list">
+        <div id="product-edit">
             <div className="callback">
                 {callbacks.length > 0 && callbacks.map((callback) => (<Callback key={callback._id} {...callback} />))}
             </div>
-            <Header />
-            <Menu />
             <div className="container">
-                <div className="product-group">
-                    <h3 className="title">Novo Produto</h3>
-                    <div className="wg grid">
-                        <div className="col-md-4-12">
-                            <TextField
-                                id="name"
-                                label="Nome do produto"
-                                placeholder="Ex: Bolo de morango"
-                                value={product.name}
-                                onBlur={handleFieldChange}
-                            />
-                            <TextField
-                                id="description"
-                                label="Descrição"
-                                placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
-                                value={product.description}
-                                onBlur={handleFieldChange}
-                            />
-                            <TextField
-                                id="price"
-                                label="Preço do produto"
-                                placeholder="Ex: 5.50"
-                                value={product.price}
-                                onBlur={handleFieldChange}
-                            />
-                            <TextField
-                                id="category"
-                                label="Categoria do produto"
-                                placeholder="Ex: Sobremesa, Lanche, Salgado ou Bebida"
-                                value={product.category}
-                                onBlur={handleFieldChange}
-                            />
-                            <div className="field-group">
-                                <button onClick={handleSubmit} type="button" className="button">Criar Produto</button>
+                <div className="wg grid">
+                    <div className="col-md-3-12">
+                        <Menu />
+                    </div>
+                    <div className="col content">
+                        <h3 className="title">Novo Produto</h3>
+                        <div className="wg grid">
+                            <div className="col-lg-6-12 col-md-12-12">
+                                <TextField
+                                    id="name"
+                                    label="Nome do produto"
+                                    placeholder="Ex: Bolo de morango"
+                                    value={product.name}
+                                    onBlur={handleFieldChange}
+                                />
+                                <TextField
+                                    id="description"
+                                    label="Descrição"
+                                    placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
+                                    value={product.description}
+                                    onBlur={handleFieldChange}
+                                />
+                                <TextField
+                                    id="price"
+                                    label="Preço do produto"
+                                    placeholder="Ex: 5.50"
+                                    value={product.price}
+                                    onBlur={handleFieldChange}
+                                />
+                                <SelectField
+                                    id="category"
+                                    label="Categoria do produto"
+                                    value={product.category}
+                                    onChange={handleFieldChange}
+                                    options={[
+                                        { value: '', label: 'Selecione' },
+                                        { value: 'Sobremesa', label: 'Sobremesa' },
+                                        { value: 'Lanche', label: 'Lanche' },
+                                        { value: 'Salgado', label: 'Salgado' },
+                                        { value: 'Bebida', label: 'Bebida' },
+                                    ]}
+                                />
+                                <div className="field-group">
+                                    <button onClick={handleSubmit} type="button" className="button fluid button--primary">Criar Produto</button>
+                                </div>
                             </div>
                         </div>
                     </div>

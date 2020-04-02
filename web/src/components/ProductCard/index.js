@@ -1,6 +1,5 @@
 import React from 'react';
-import { FiPlus, FiEdit3 } from 'react-icons/fi';
-import { FiMinus } from 'react-icons/fi';
+import { FiEdit3 } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 // import { MdStar } from 'react-icons/md';
 

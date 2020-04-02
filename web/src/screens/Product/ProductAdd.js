@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
 import Callback from "./../../components/Callback";
-import Header from "./../../components/Header";
 import Menu from "./../../components/Menu";
 import TextField from "./../../components/TextField";
+import SelectField from "./../../components/SelectField";
 import { set_callback } from '../../redux/actions/callbacks';
 
 import { api } from "./../../helpers";
@@ -50,7 +50,14 @@ let ProductAdd = (props) => {
     }
 
     let handleSubmit = async () => {
-        if (!formValidate()) { return; }
+        if (!formValidate()) { 
+            dispatch(set_callback({
+                _id: Math.random(),
+                status: "error",
+                message: "Preenche o formulário corretamente."
+            }));
+            return; 
+        }
 
         let data = {
             name: form.name.value,
@@ -80,14 +87,14 @@ let ProductAdd = (props) => {
                 status: false
             },
             category: {
-                value: "",
+                value: null,
                 status: false
             }
         });
     }
 
     return (
-        <div id="product-list">
+        <div id="product-add">
             <div className="callback">
                 {callbacks.length > 0 && callbacks.map((callback) => (<Callback key={callback._id} {...callback} />))}
             </div>
@@ -99,7 +106,7 @@ let ProductAdd = (props) => {
                     <div className="col content">
                         <h3 className="title">Novo Produto</h3>
                         <div className="wg grid">
-                            <div className="col-md-4-12">
+                            <div className="col-lg-6-12 col-md-12-12">
                                 <TextField
                                     id="name"
                                     label="Nome do produto"
@@ -118,14 +125,20 @@ let ProductAdd = (props) => {
                                     placeholder="Ex: 5.50"
                                     onBlur={handleFieldChange}
                                 />
-                                <TextField
+                                <SelectField
                                     id="category"
                                     label="Categoria do produto"
-                                    placeholder="Ex: Sobremesa, Lanche, Salgado ou Bebida"
-                                    onBlur={handleFieldChange}
+                                    onChange={handleFieldChange}
+                                    options={[
+                                        { value: '', label: 'Selecione' },
+                                        { value: 'Sobremesa', label: 'Sobremesa' },
+                                        { value: 'Lanche', label: 'Lanche' },
+                                        { value: 'Salgado', label: 'Salgado' },
+                                        { value: 'Bebida', label: 'Bebida' },
+                                    ]}
                                 />
                                 <div className="field-group">
-                                    <button onClick={handleSubmit} type="button" className="button">Criar Produto</button>
+                                    <button onClick={handleSubmit} type="button" className="button fluid button--primary">Criar Produto</button>
                                 </div>
                             </div>
                         </div>

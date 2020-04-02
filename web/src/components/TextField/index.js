@@ -13,14 +13,15 @@ let TextField = (props) => {
         if (props.value && props.value.trim().length > 0) {
             setFieldValue(props.value);
             handleBlur();
+            setHasChanged(true);
         }
         // eslint-disable-next-line
-    }, [])
+    }, [props.value])
 
     useEffect(() => {
-        if (!hasChanged) { 
+        if (!hasChanged) {
             setHasChanged(true);
-            return; 
+            return;
         }
 
         props.onBlur(props.id, {
@@ -46,7 +47,10 @@ let TextField = (props) => {
     }
 
     let checkMandatory = () => {
-        if (fieldValue.length < 1 || fieldValue.trim() === "") {
+        if (
+            (fieldValue.length < 1 || fieldValue.trim() === "") &&
+            (props.value && props.value.trim().length < 1)
+        ) {
             setCallback({
                 message: "Este campo é obrigatório!",
                 status: false
