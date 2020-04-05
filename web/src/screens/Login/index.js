@@ -4,11 +4,9 @@ import { useHistory } from "react-router-dom";
 import { set_logged } from "./../../redux/actions/logged";
 import { set_callback } from "./../../redux/actions/callbacks";
 
-import { set } from "./../../helpers";
-
 import Callback from "./../../components/Callback";
 import TextField from "./../../components/TextField";
-import { api } from "./../../helpers";
+import { set, api, formValidate } from "./../../helpers";
 
 let Login = (props) => {
 
@@ -32,20 +30,8 @@ let Login = (props) => {
         setForm({ ...form, [key]: field });
     }
 
-    let formValidate = () => {
-        let checker = true;
-
-        Object.keys(form).forEach((key) => {
-            if (!form[key].status) {
-                checker = false;
-            }
-        })
-
-        return checker;
-    }
-
     let handleSubmit = async () => {
-        if (!formValidate()) {
+        if (!formValidate(form)) {
             dispatch(set_callback({
                 _id: Math.random(),
                 status: "error",

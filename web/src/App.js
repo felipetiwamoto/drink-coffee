@@ -13,9 +13,9 @@ import ProductAdd from "./screens/Product/ProductAdd";
 import ProductEdit from "./screens/Product/ProductEdit";
 import Cart from "./screens/Cart";
 import Order from "./screens/Order";
+import Logout from "./screens/Logout";
 
 let App = (props) => {
-
     return (
         <Provider store={store}>
             <BrowserRouter>
@@ -26,11 +26,11 @@ let App = (props) => {
                     <Route path="/produtos/editar/:id" component={ProductEdit} />
                     <Route path="/carrinho" component={Cart} />
                     <Route path="/pedidos" component={Order} />
+                    <Route path="/sair" component={Logout} />
                 </Switch>
             </BrowserRouter>
         </Provider>
     );
-
 }
 
 export default App;

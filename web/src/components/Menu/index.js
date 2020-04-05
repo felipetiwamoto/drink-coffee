@@ -1,7 +1,15 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+import { isLogged } from "./../../helpers";
 
 let Menu = (props) => {
+
+    let history = useHistory();
+
+    React.useEffect(() => {
+        !isLogged() && history.push("/sair");
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <ul className="menu">
@@ -13,9 +21,6 @@ let Menu = (props) => {
             </li>
             <li className="menu__item">
                 <NavLink activeClassName="menu__link--active" to="/pedidos" className="menu__link">Pedidos</NavLink>
-            </li>
-            <li className="menu__item">
-                <NavLink activeClassName="menu__link--active" to="/membros" className="menu__link">Membros</NavLink>
             </li>
             <li className="menu__item">
                 <NavLink activeClassName="menu__link--active" to="/sair" className="menu__link">Sair</NavLink>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
 import Callback from "./../../components/Callback";
-import Header from "./../../components/Header";
 import Menu from "./../../components/Menu";
 import ProductCard from "./../../components/ProductCard";
 import { set_callback } from '../../redux/actions/callbacks';

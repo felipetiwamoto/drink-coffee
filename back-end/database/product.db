@@ -1,14 +1,6 @@
-{"name":"X-Salada","description":"Pão francês, hamburger de boi, alface, tomate","price":"5","category":"Lanche","_id":"2psE0CbRyH1lWbKf"}
-{"name":"X-Bacon","description":"Pão de brioche, hamburger, bacon, chedder!","price":"6","category":"Lanche","_id":"8n7CjzbR5VlFPD0g"}
-{"name":"Risoles de pizza","description":"Queijo, presunto, orégano e tomate","price":"3","category":"Salgado","_id":"GMFPw6Euxgl0uYhp"}
-{"name":"Bolo de morango","description":"Massa de chocolate, suspiros, creme de morango","price":"5","category":"Sobremesa","_id":"HbaY1inq4oWo3iJL"}
-{"name":"X-Tudo","description":"Pão de brioche, hamburger, bacon, ovo, chedder, alface, tomate!","price":"9","category":"Lanche","_id":"RCVwm137PkGrnL22"}
-{"name":"Massa de bolo de chocolate","description":"Sim, temos massa de bolo com aquele gostinho de infância!","price":"5","category":"Sobremesa","_id":"RG2XcYHoMBPbENnm"}
-{"name":"Brigadeiro","description":"O brigadeiro tradicional feito em casa, sem usar massa pronta em lata.","price":"4","category":"Sobremesa","_id":"VIumVFZgRxHEGOiW"}
-{"name":"Fanta laranja 600ml","description":"Garrafinha de fanta laranja","price":"7","category":"Bebida","_id":"ct4SJxFirKTYbLGl"}
-{"name":"Beijinho","description":"O beijinho tradicional feito em casa, sem usar massa pronta em lata.","price":"3","category":"Sobremesa","_id":"fBgIt9Lr3g6NBrnh"}
-{"name":"ajoasjoasj","description":"jsajaspkaso","price":"78","category":"Lanche","_id":"lm1qLKTMlGa6vM1e"}
-{"name":"Fanta laranja 350ml","description":"Latinha de fanta laranja","price":"3","category":"Bebida","_id":"nwUec2Oj4np0QX8g"}
-{"name":"jaoisoj","description":"saopaopsaspokas","price":"78","category":"Sobremesa","_id":"z0JcKD14nIm5QIfM"}
-{"name":"Hot Dog simples","description":"Vina, batata palha, tomate, cebola, milho","price":"7","category":"Lanche","_id":"lm1qLKTMlGa6vM1e"}
-{"name":"Petit Gateau","description":"Não sei se esta escrito certo...","price":"10","category":"Sobremesa","_id":"z0JcKD14nIm5QIfM"}
+{"name":"Bolo de morango","description":"Massa branca, suspiro, creme de morango e morango","price":"5","category":"Sobremesa","_id":"8xoPpuaTXSSy5Ehw"}
+{"name":"Bolo de trento","description":"Massa branca, creme de trento e trento","price":"6.50","category":"Sobremesa","_id":"MBCBvhpb1oWaKZup"}
+{"name":"Bolo de ouro branco","description":"Massa branca, creme de ouro branco e ouro branco","price":"5","category":"Sobremesa","_id":"Uf0w41ZhaEwQlnT9"}
+{"name":"X-Salada","description":"Hamburger, alface, tomate, maionese","price":"6","category":"Lanche","_id":"XQ5cPKdrKmEmX7tF"}
+{"name":"Bolo de ferrero rocher","description":"Massa de chocolate, creme de ferro rocher e ferro rocher","price":"9","category":"Sobremesa","_id":"dZBCjrGEXT49PmrS"}
+{"name":"Bolo de morango","description":"Massa branca, suspiro, creme de morango e morango","price":"5","category":"Sobremesa","_id":"8xoPpuaTXSSy5Ehw"}

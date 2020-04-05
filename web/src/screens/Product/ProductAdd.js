@@ -7,14 +7,14 @@ import TextField from "./../../components/TextField";
 import SelectField from "./../../components/SelectField";
 import { set_callback } from '../../redux/actions/callbacks';
 
-import { api } from "./../../helpers";
+import { api, formValidate } from "./../../helpers";
 
 let ProductAdd = (props) => {
 
     let dispatch = useDispatch();
 
     let callbacks = useSelector((state) => (state.callbacks));
-    const [form, setForm] = useState({
+    let [form, setForm] = useState({
         name: {
             value: "",
             status: false
@@ -37,20 +37,8 @@ let ProductAdd = (props) => {
         setForm({ ...form, [key]: field });
     }
 
-    let formValidate = () => {
-        let checker = true;
-
-        Object.keys(form).forEach((key) => {
-            if (!form[key].status) {
-                checker = false;
-            }
-        })
-
-        return checker;
-    }
-
     let handleSubmit = async () => {
-        if (!formValidate()) { 
+        if (!formValidate(form)) { 
             dispatch(set_callback({
                 _id: Math.random(),
                 status: "error",
@@ -87,7 +75,7 @@ let ProductAdd = (props) => {
                 status: false
             },
             category: {
-                value: null,
+                value: "",
                 status: false
             }
         });
@@ -112,23 +100,28 @@ let ProductAdd = (props) => {
                                     label="Nome do produto"
                                     placeholder="Ex: Bolo de morango"
                                     onBlur={handleFieldChange}
+                                    value={form.name.value}
                                 />
                                 <TextField
                                     id="description"
                                     label="Descrição"
                                     placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
                                     onBlur={handleFieldChange}
+                                    value={form.description.value}
                                 />
                                 <TextField
                                     id="price"
                                     label="Preço do produto"
                                     placeholder="Ex: 5.50"
                                     onBlur={handleFieldChange}
+                                    value={form.price.value}
                                 />
+                                
                                 <SelectField
                                     id="category"
                                     label="Categoria do produto"
                                     onChange={handleFieldChange}
+                                    value={form.category.value}
                                     options={[
                                         { value: '', label: 'Selecione' },
                                         { value: 'Sobremesa', label: 'Sobremesa' },

@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { set_orders } from "./../../redux/actions/orders";
 
 import Callback from "./../../components/Callback";
-import Header from "./../../components/Header";
 import Menu from "./../../components/Menu";
 import OrderCard from "./../../components/OrderCard";
 import { api } from "./../../helpers";

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 let SelectField = (props) => {
 
-    let [hasChanged, setHasChanged] = useState(false);
     let [fieldValue, setFieldValue] = useState("");
     let [callback, setCallback] = useState({
         message: "",
@@ -10,57 +9,46 @@ let SelectField = (props) => {
     });
 
     useEffect(() => {
-        if (props.value.trim().length > 0) {
-            setFieldValue(props.value);
-        }
+        setFieldValue(props.value);
     }, [props.value]);
 
     useEffect(() => {
-        if(!hasChanged){
-            setHasChanged(true);
-            return;
-        }
-        
-        checkMandatory();
-    }, [fieldValue])
+        validation();
+        // eslint-disable-next-line
+    }, [fieldValue]);
 
     useEffect(() => {
-        if (!hasChanged) {
-            setHasChanged(true);
-            return;
-        }
-
         props.onChange(props.id, {
             status: callback.status,
             value: fieldValue
-        })
+        });
         // eslint-disable-next-line
-    }, [callback])
+    }, [callback]);
 
     let handleChange = (e) => {
         setFieldValue(e.target.value);
     }
 
-    let checkMandatory = () => {
+    let validation = () => {
         if (!props.mandatory) {
-            setCallback({ message: "", status: true });
-            return true;
+            return setCallback({ status: true, message: "" });
         }
 
-        if (fieldValue.length < 1 || fieldValue.trim() === "") {
-            setCallback({
-                message: "Este campo é obrigatório!",
-                status: false
-            });
+        if (!requiredValidation()) { return; }
+
+        setCallback({ status: true, message: "" });
+    }
+
+    let requiredValidation = () => {
+        if ((fieldValue.trim().length < 1)) {
+            setCallback({ status: false, message: "Este campo é obrigatório." });
             return false;
         }
-
-        setCallback({ message: "", status: true });
         return true;
     }
 
     return (
-        <div className={`field-group ${props.className}`}>
+        <div className={`field-group ${props.className} ${!callback.status ? `error` : ``}`}>
             <select
                 name={props.id}
                 id={props.id}
@@ -89,7 +77,7 @@ SelectField.defaultProps = {
     value: "",
     label: null,
     className: "",
-    mandatory: true,
+    mandatory: true
 }
 
 export default SelectField;

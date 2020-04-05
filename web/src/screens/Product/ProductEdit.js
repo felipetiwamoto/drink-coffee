@@ -8,65 +8,43 @@ import Menu from "./../../components/Menu";
 import SelectField from "./../../components/SelectField";
 import TextField from "./../../components/TextField";
 
-import { api } from "./../../helpers";
+import { api, formValidate } from "./../../helpers";
 
 let ProductEdit = (props) => {
 
     let dispatch = useDispatch();
     let callbacks = useSelector((state) => (state.callbacks));
-    let [product, setProduct] = useState({
-        name: "",
-        description: "",
-        price: "",
-        category: ""
-    });
+    let [product, setProduct] = useState(null);
 
-    let [form, setForm] = useState({
-        name: {
-            value: "",
-            status: false
-        },
-        description: {
-            value: "",
-            status: false
-        },
-        price: {
-            value: "",
-            status: false
-        },
-        category: {
-            value: "",
-            status: false
-        }
-    });
+    let [form, setForm] = useState({});
+
+
+    useEffect(() => {
+        getProduct();
+         // eslint-disable-next-line
+    }, []);
+
+    useEffect(() => {
+        let data = {};
+
+        product !== null && Object.keys(product).forEach((key) => {
+            data = { ...data, [key]: { status:true, value: product[key]}};
+        });
+
+        setForm(data);
+    }, [product])
 
     let getProduct = async () => {
         let result = await api.get(`/product/${props.match.params.id}`);
         setProduct(result.data);
     }
 
-    useEffect(() => {
-        getProduct();
-    }, [])
-
     let handleFieldChange = (key, field) => {
-        setForm({ ...form, [key]: field });
-    }
-
-    let formValidate = () => {
-        let checker = true;
-
-        Object.keys(form).forEach((key) => {
-            if (!form[key].status) {
-                checker = false;
-            }
-        })
-
-        return checker;
+        setForm({ ...form, [key]: { ...field } });
     }
 
     let handleSubmit = async () => {
-        if (!formValidate()) {
+        if (!formValidate(form)) {
             dispatch(set_callback({
                 _id: Math.random(),
                 status: "error",
@@ -88,25 +66,6 @@ let ProductEdit = (props) => {
             status: "success",
             message: "Produto alterado com sucesso."
         }));
-
-        setForm({
-            name: {
-                value: "",
-                status: false
-            },
-            description: {
-                value: "",
-                status: false
-            },
-            price: {
-                value: "",
-                status: false
-            },
-            category: {
-                value: "",
-                status: false
-            }
-        });
     }
 
     return (
@@ -120,47 +79,49 @@ let ProductEdit = (props) => {
                         <Menu />
                     </div>
                     <div className="col content">
-                        <h3 className="title">Novo Produto</h3>
+                        <h3 className="title">Editar Produto</h3>
                         <div className="wg grid">
-                            <div className="col-lg-6-12 col-md-12-12">
-                                <TextField
-                                    id="name"
-                                    label="Nome do produto"
-                                    placeholder="Ex: Bolo de morango"
-                                    value={product.name}
-                                    onBlur={handleFieldChange}
-                                />
-                                <TextField
-                                    id="description"
-                                    label="Descrição"
-                                    placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
-                                    value={product.description}
-                                    onBlur={handleFieldChange}
-                                />
-                                <TextField
-                                    id="price"
-                                    label="Preço do produto"
-                                    placeholder="Ex: 5.50"
-                                    value={product.price}
-                                    onBlur={handleFieldChange}
-                                />
-                                <SelectField
-                                    id="category"
-                                    label="Categoria do produto"
-                                    value={product.category}
-                                    onChange={handleFieldChange}
-                                    options={[
-                                        { value: '', label: 'Selecione' },
-                                        { value: 'Sobremesa', label: 'Sobremesa' },
-                                        { value: 'Lanche', label: 'Lanche' },
-                                        { value: 'Salgado', label: 'Salgado' },
-                                        { value: 'Bebida', label: 'Bebida' },
-                                    ]}
-                                />
-                                <div className="field-group">
-                                    <button onClick={handleSubmit} type="button" className="button fluid button--primary">Criar Produto</button>
+                            {product !== null &&
+                                <div className="col-lg-6-12 col-md-12-12">
+                                    <TextField
+                                        id="name"
+                                        label="Nome do produto"
+                                        placeholder="Ex: Bolo de morango"
+                                        value={product.name}
+                                        onBlur={handleFieldChange}
+                                    />
+                                    <TextField
+                                        id="description"
+                                        label="Descrição"
+                                        placeholder="Ex: Feito com massa de chocolate, suspiro e morango..."
+                                        value={product.description}
+                                        onBlur={handleFieldChange}
+                                    />
+                                    <TextField
+                                        id="price"
+                                        label="Preço do produto"
+                                        placeholder="Ex: 5.50"
+                                        value={product.price}
+                                        onBlur={handleFieldChange}
+                                    />
+                                    <SelectField
+                                        id="category"
+                                        label="Categoria do produto"
+                                        value={product.category}
+                                        onChange={handleFieldChange}
+                                        options={[
+                                            { value: '', label: 'Selecione' },
+                                            { value: 'Sobremesa', label: 'Sobremesa' },
+                                            { value: 'Lanche', label: 'Lanche' },
+                                            { value: 'Salgado', label: 'Salgado' },
+                                            { value: 'Bebida', label: 'Bebida' },
+                                        ]}
+                                    />
+                                    <div className="field-group">
+                                        <button onClick={handleSubmit} type="button" className="button fluid button--primary">Editar Produto</button>
+                                    </div>
                                 </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>

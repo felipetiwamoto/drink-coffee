@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 let TextField = (props) => {
 
-    let [hasChanged, setHasChanged] = useState(false);
     let [fieldValue, setFieldValue] = useState("");
     let [callback, setCallback] = useState({
         message: "",
@@ -10,23 +9,18 @@ let TextField = (props) => {
     });
 
     useEffect(() => {
-        if (props.value && props.value.trim().length > 0) {
-            setFieldValue(props.value);
-            handleBlur();
-            setHasChanged(true);
-        }
-        // eslint-disable-next-line
-    }, [props.value])
+        setFieldValue(props.value);
+    }, [props.value]);
 
     useEffect(() => {
-        if (!hasChanged) {
-            setHasChanged(true);
-            return;
-        }
+        validation();
+        // eslint-disable-next-line
+    }, [fieldValue]);
 
+    useEffect(() => {
         props.onBlur(props.id, {
-            value: fieldValue,
-            status: callback.status
+            status: callback.status,
+            value: fieldValue
         });
         // eslint-disable-next-line
     }, [callback]);
@@ -35,57 +29,39 @@ let TextField = (props) => {
         setFieldValue(e.target.value);
     }
 
-    let handleBlur = () => {
+    let validation = () => {
         if (!props.mandatory) {
-            setCallback({ message: "", status: true });
-            return true;
+            return setCallback({ status: true, message: "" });
         }
 
-        if (!checkMandatory()) { return; };
-        if (!checkMinLength()) { return; };
-        if (!checkMaxLength()) { return; };
+        if (!requiredValidation()) { return; }
+        if (!minLengthValidation()) { return; }
+        if (!maxLengthValidation()) { return; }
+
+        setCallback({ status: true, message: "" });
     }
 
-    let checkMandatory = () => {
-        if (
-            (fieldValue.length < 1 || fieldValue.trim() === "") &&
-            (props.value && props.value.trim().length < 1)
-        ) {
-            setCallback({
-                message: "Este campo é obrigatório!",
-                status: false
-            });
+    let requiredValidation = () => {
+        if ((fieldValue.trim().length < 1)) {
+            setCallback({ status: false, message: "Este campo é obrigatório." });
             return false;
         }
-
-        setCallback({ message: "", status: true });
         return true;
     }
 
-    let checkMinLength = () => {
-        if (fieldValue.length < props.minLength) {
-            setCallback({
-                message: `Digite no máximo ${props.minLength} caracteres.`,
-                status: false
-            });
+    let minLengthValidation = () => {
+        if (props.minLength !== null && (fieldValue.length < props.minLength)) {
+            setCallback({ status: false, message: `Digite no mínimo ${props.minLength} caracteres.` });
             return false;
         }
-
-        setCallback({ message: "", status: true });
         return true;
     }
 
-
-    let checkMaxLength = () => {
-        if (props.maxLength !== null && fieldValue.length > props.maxLength) {
-            setCallback({
-                message: `Digite no mínimo ${props.maxLength} caracteres.`,
-                status: false
-            });
+    let maxLengthValidation = () => {
+        if (props.maxLength !== null && (fieldValue.length > props.maxLength)) {
+            setCallback({ status: false, message: `Digite no máximo ${props.maxLength} caracteres.` });
             return false;
         }
-
-        setCallback({ message: "", status: true });
         return true;
     }
 
@@ -98,8 +74,8 @@ let TextField = (props) => {
                 name={props.id}
                 placeholder={props.placeholder}
                 value={fieldValue}
-                onChange={(e) => handleChange(e)}
-                onBlur={() => handleBlur()}
+                onChange={handleChange}
+                onBlur={validation}
             />
             <label htmlFor={props.id}>
                 {props.label}
@@ -120,7 +96,7 @@ TextField.defaultProps = {
     className: "",
     mandatory: true,
     minLength: null,
-    maxLength: null,
+    maxLength: null
 }
 
 export default TextField;
