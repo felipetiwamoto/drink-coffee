@@ -1,4 +1,4 @@
-{"name":"Jane R. Iwamoto","email":"jane.r.iwamoto@gmail.com","password":"qwe123@","created_at":1585083844,"_id":"4ruH6Czbf7n3eRHt"}
-{"name":"Felipe T. Iwamoto","email":"felipe.t.iwamoto@gmail.com","password":"qwe123@","created_at":1585083816,"_id":"A1QnS3Sws1xZHERf"}
-{"name":"Larissa Costa","email":"larissa.costa@gmail.com","password":"qwe123@","created_at":1585083856,"_id":"R68K1xirXpzZrV73"}
-{"name":"Wladmir Amorim","email":"wladmir.amorim@gmail.com","password":"qwe123@","created_at":1585083873,"_id":"Z9V9qSjRd8NVNPLn"}
+{"name":"Funcionario 1","email":"funcionario1@gmail.com","password":"123456","created_at":1585083844,"_id":"4ruH6Czbf7n3eRHt"}
+{"name":"Funcionario 2","email":"funcionario2@gmail.com","password":"123456","created_at":1585083816,"_id":"A1QnS3Sws1xZHERf"}
+{"name":"Funcionario 3","email":"funcionario3@gmail.com","password":"123456","created_at":1585083856,"_id":"R68K1xirXpzZrV73"}
+{"name":"Administrador","email":"administrador@gmail.com","password":"123456","created_at":1585083873,"_id":"Z9V9qSjRd8NVNPLn"}

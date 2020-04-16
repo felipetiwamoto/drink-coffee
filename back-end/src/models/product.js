@@ -7,7 +7,7 @@ let db = new nedb({
 
 module.exports.all = () => {
     return new Promise((resolve, reject) => {
-        db.find({}).exec((error, data) => {
+        db.find({}).sort({ name: 1 }).exec((error, data) => {
             resolve(data);
         })
     })

@@ -11,7 +11,9 @@ module.exports.create = (data) => {
 
 module.exports.find = (body) => {
     return new Promise((resolve, reject) => {
-        db.findOne({ email: body.email }).exec((error, data) => {
+        console.log(body);
+        db.findOne({ email: body.email, password: body.password }).exec((error, data) => {
+            console.log("data", data);
             resolve(data);
         })
     })

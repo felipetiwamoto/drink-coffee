@@ -4,11 +4,11 @@
 
 //     for (let i = 1; i <= 25; i++) {
 //         let data = {};
-//         data.name = `Nome do salgado ${i}`;
+//         data.name = `Nome da bebida ${i}`;
 //         data.price = randDecimal(4, 25);
-//         data.description = `Descrição do salgado de numero ${i}...`;
+//         data.description = `Descrição da bebida de numero ${i}...`;
 //         data.amount = randInteger(7, 35);
-//         data.category = "Salgado";
+//         data.category = "Bebida";
 
 //         model.create(data);
 //     }
