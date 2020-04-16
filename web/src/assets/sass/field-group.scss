@@ -1,0 +1,57 @@
+@import "theme";
+
+.field-group{
+    display:flex;
+    flex-direction:column-reverse;
+    width:100%;
+    margin-bottom:10px;
+
+    .field{
+        min-height:40px;
+        border-radius:5px;
+        padding:5px 15px;
+        border:1px solid $grey4;
+        outline:none;
+        box-shadow:none;
+    }
+
+    label{
+        font-size:14px;
+        margin-bottom:1px;
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-end;
+
+        .callback{
+            font-size:12px;
+            margin:0px;
+            position:initial;
+            text-align:right;
+        }
+    }
+
+    &.error{
+        label{
+            color:$error;
+        }
+        .field{
+            border-color:$error;
+            background-color:#{$error}30;
+            color:$error;
+            &::placeholder{
+                color:#{$error}99;
+            }
+        }
+    }
+
+    &.success{
+        label{
+            color:$success;
+        }
+        .field{
+            border-color:$success;
+            background-color:#{$success}30;
+            color:$success;  
+        }
+    }
+}

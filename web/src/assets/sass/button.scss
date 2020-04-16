@@ -1,0 +1,115 @@
+@import "theme";
+
+.button{
+    min-height:40px;
+    padding:5px 15px;
+    border-radius:5px;
+    transition:0.3s;
+    letter-spacing:1px;
+    border:1px solid $grey5;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    outline:none;
+    background-color:$grey6;
+    cursor:pointer;
+
+    &.fluid{
+        width:100%;
+    }
+
+    &:hover{
+        filter:brightness(95%);
+        transition:0.3s;
+    }
+
+    &--primary{
+        background-color:$primary;
+        border-color:$primary;
+        color:$white;
+    }
+
+    &--secondary{
+        background-color:$secondary;
+        border-color:$secondary;
+        color:$white;
+    }
+
+    &--error{
+        background-color:$error;
+        border-color:$error;
+        color:$white;
+    }
+
+    &--success{
+        background-color:$success;
+        border-color:$success;
+        color:$white;
+    }
+
+    &--white{
+        background-color:$white;
+        border-color:$white;
+        color:$grey9;
+    }
+
+    &--black{
+        background-color:$black;
+        border-color:$black;
+        color:$white;
+    }
+
+    &--grey5{
+        background-color:$grey1;
+        border-color:$grey1;
+        color:$grey4;
+    }
+
+    &--grey2{
+        background-color:$grey2;
+        border-color:$grey2;
+        color:$grey5;
+    }
+
+    &--grey3{
+        background-color:$grey3;
+        border-color:$grey3;
+        color:$grey6;
+    }
+
+    &--grey4{
+        background-color:$grey4;
+        border-color:$grey4;
+        color:$grey7;
+    }
+
+    &--grey5{
+        background-color:$grey5;
+        border-color:$grey5;
+        color:$grey8;
+    }
+
+    &--grey6{
+        background-color:$grey6;
+        border-color:$grey6;
+        color:$grey3;
+    }
+
+    &--grey7{
+        background-color:$grey7;
+        border-color:$grey7;
+        color:$grey2;
+    }
+
+    &--grey8{
+        background-color:$grey8;
+        border-color:$grey8;
+        color:$grey1;
+    }
+
+    &--grey9{
+        background-color:$grey9;
+        border-color:$grey9;
+        color:$white;
+    }
+}

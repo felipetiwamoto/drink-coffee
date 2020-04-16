@@ -1,0 +1,2387 @@
+.wg.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .wg.grid > .col,
+  .wg.grid > div[class*="col-xs-"],
+  .wg.grid > div[class*="col-sm-"],
+  .wg.grid > div[class*="col-md-"],
+  .wg.grid > div[class*="col-lg-"],
+  .wg.grid > div[class*="col-xl-"] {
+    flex-grow: 1;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box; }
+  .wg.grid .col {
+    width: initial; }
+
+@media all and (max-width: 576px) {
+  .wg.grid > .col-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .col-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .col-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .col-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .col-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .col-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .col-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .col-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .col-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .col-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .col-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .col-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .col-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .col-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .col-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .col-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .col-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .col-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .col-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .col-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .col-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .col-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .col-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .col-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .col-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .offset-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .offset-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .offset-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .offset-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .offset-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .offset-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .offset-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .offset-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .offset-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .offset-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .offset-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .offset-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .offset-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .offset-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .offset-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .offset-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .offset-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .offset-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .offset-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .offset-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .offset-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .offset-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .offset-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .offset-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .push-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .push-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .push-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .push-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .push-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .push-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .push-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .push-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .push-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .push-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .push-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .push-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .push-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .push-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .push-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .push-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .push-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .push-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .push-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .push-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .push-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .push-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .push-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .push-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .order-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .order-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .order-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .order-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .order-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .order-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .order-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .order-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .order-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .order-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .order-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .order-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .order-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .order-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .order-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .order-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .order-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .order-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .order-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .order-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .order-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .order-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .order-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .order-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+@media all and (min-width: 576px) {
+  .wg.grid > .col-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .col-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .col-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .col-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .col-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .col-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .col-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .col-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .col-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .col-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .col-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .col-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .col-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .col-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .col-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .col-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .col-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .col-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .col-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .col-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .col-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .col-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .col-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .col-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .col-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .offset-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .offset-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .offset-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .offset-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .offset-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .offset-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .offset-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .offset-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .offset-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .offset-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .offset-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .offset-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .offset-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .offset-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .offset-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .offset-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .offset-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .offset-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .offset-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .offset-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .offset-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .offset-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .offset-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .offset-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .push-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .push-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .push-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .push-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .push-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .push-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .push-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .push-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .push-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .push-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .push-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .push-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .push-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .push-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .push-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .push-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .push-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .push-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .push-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .push-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .push-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .push-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .push-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .push-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-xs-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .order-xs-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .order-xs-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-xs-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .order-xs-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .order-xs-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-xs-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .order-xs-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .order-xs-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-xs-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .order-xs-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .order-xs-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-xs-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .order-xs-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .order-xs-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .order-xs-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .order-xs-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-xs-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .order-xs-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .order-xs-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .order-xs-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .order-xs-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-xs-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .order-xs-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .order-xs-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .order-xs-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .order-xs-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-xs-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .order-xs-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .order-xs-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .order-xs-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .order-xs-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-sm-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .col-sm-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .col-sm-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-sm-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .col-sm-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .col-sm-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-sm-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .col-sm-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .col-sm-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-sm-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .col-sm-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .col-sm-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-sm-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .col-sm-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .col-sm-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .col-sm-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .col-sm-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-sm-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .col-sm-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .col-sm-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .col-sm-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .col-sm-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-sm-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .col-sm-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .col-sm-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .col-sm-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .col-sm-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-sm-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .col-sm-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .col-sm-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .col-sm-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .col-sm-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-sm-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .offset-sm-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .offset-sm-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-sm-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .offset-sm-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .offset-sm-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-sm-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .offset-sm-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .offset-sm-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-sm-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .offset-sm-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .offset-sm-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-sm-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .offset-sm-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .offset-sm-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .offset-sm-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .offset-sm-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-sm-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .offset-sm-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .offset-sm-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .offset-sm-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .offset-sm-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-sm-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .offset-sm-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .offset-sm-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .offset-sm-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .offset-sm-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-sm-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .offset-sm-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .offset-sm-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .offset-sm-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .offset-sm-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-sm-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .push-sm-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .push-sm-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-sm-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .push-sm-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .push-sm-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-sm-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .push-sm-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .push-sm-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-sm-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .push-sm-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .push-sm-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-sm-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .push-sm-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .push-sm-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .push-sm-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .push-sm-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-sm-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .push-sm-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .push-sm-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .push-sm-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .push-sm-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-sm-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .push-sm-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .push-sm-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .push-sm-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .push-sm-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-sm-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .push-sm-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .push-sm-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .push-sm-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .push-sm-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-sm-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .order-sm-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .order-sm-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-sm-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .order-sm-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .order-sm-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-sm-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .order-sm-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .order-sm-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-sm-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .order-sm-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .order-sm-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-sm-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .order-sm-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .order-sm-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .order-sm-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .order-sm-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-sm-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .order-sm-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .order-sm-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .order-sm-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .order-sm-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-sm-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .order-sm-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .order-sm-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .order-sm-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .order-sm-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-sm-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .order-sm-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .order-sm-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .order-sm-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .order-sm-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+@media all and (min-width: 768px) {
+  .wg.grid > .col-md-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .col-md-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .col-md-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-md-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .col-md-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .col-md-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-md-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .col-md-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .col-md-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-md-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .col-md-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .col-md-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-md-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .col-md-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .col-md-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .col-md-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .col-md-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-md-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .col-md-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .col-md-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .col-md-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .col-md-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-md-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .col-md-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .col-md-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .col-md-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .col-md-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-md-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .col-md-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .col-md-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .col-md-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .col-md-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-md-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .offset-md-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .offset-md-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-md-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .offset-md-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .offset-md-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-md-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .offset-md-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .offset-md-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-md-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .offset-md-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .offset-md-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-md-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .offset-md-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .offset-md-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .offset-md-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .offset-md-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-md-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .offset-md-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .offset-md-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .offset-md-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .offset-md-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-md-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .offset-md-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .offset-md-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .offset-md-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .offset-md-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-md-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .offset-md-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .offset-md-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .offset-md-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .offset-md-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-md-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .push-md-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .push-md-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-md-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .push-md-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .push-md-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-md-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .push-md-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .push-md-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-md-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .push-md-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .push-md-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-md-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .push-md-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .push-md-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .push-md-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .push-md-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-md-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .push-md-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .push-md-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .push-md-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .push-md-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-md-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .push-md-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .push-md-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .push-md-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .push-md-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-md-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .push-md-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .push-md-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .push-md-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .push-md-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-md-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .order-md-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .order-md-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-md-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .order-md-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .order-md-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-md-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .order-md-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .order-md-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-md-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .order-md-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .order-md-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-md-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .order-md-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .order-md-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .order-md-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .order-md-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-md-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .order-md-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .order-md-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .order-md-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .order-md-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-md-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .order-md-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .order-md-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .order-md-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .order-md-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-md-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .order-md-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .order-md-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .order-md-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .order-md-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+@media all and (min-width: 992px) {
+  .wg.grid > .col-lg-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .col-lg-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .col-lg-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-lg-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .col-lg-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .col-lg-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-lg-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .col-lg-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .col-lg-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-lg-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .col-lg-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .col-lg-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-lg-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .col-lg-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .col-lg-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .col-lg-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .col-lg-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-lg-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .col-lg-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .col-lg-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .col-lg-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .col-lg-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-lg-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .col-lg-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .col-lg-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .col-lg-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .col-lg-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-lg-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .col-lg-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .col-lg-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .col-lg-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .col-lg-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-lg-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .offset-lg-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .offset-lg-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-lg-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .offset-lg-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .offset-lg-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-lg-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .offset-lg-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .offset-lg-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-lg-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .offset-lg-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .offset-lg-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-lg-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .offset-lg-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .offset-lg-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .offset-lg-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .offset-lg-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-lg-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .offset-lg-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .offset-lg-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .offset-lg-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .offset-lg-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-lg-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .offset-lg-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .offset-lg-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .offset-lg-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .offset-lg-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-lg-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .offset-lg-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .offset-lg-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .offset-lg-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .offset-lg-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-lg-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .push-lg-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .push-lg-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-lg-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .push-lg-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .push-lg-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-lg-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .push-lg-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .push-lg-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-lg-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .push-lg-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .push-lg-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-lg-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .push-lg-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .push-lg-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .push-lg-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .push-lg-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-lg-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .push-lg-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .push-lg-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .push-lg-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .push-lg-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-lg-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .push-lg-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .push-lg-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .push-lg-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .push-lg-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-lg-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .push-lg-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .push-lg-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .push-lg-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .push-lg-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-lg-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .order-lg-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .order-lg-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-lg-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .order-lg-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .order-lg-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-lg-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .order-lg-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .order-lg-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-lg-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .order-lg-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .order-lg-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-lg-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .order-lg-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .order-lg-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .order-lg-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .order-lg-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-lg-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .order-lg-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .order-lg-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .order-lg-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .order-lg-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-lg-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .order-lg-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .order-lg-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .order-lg-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .order-lg-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-lg-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .order-lg-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .order-lg-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .order-lg-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .order-lg-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+@media all and (min-width: 1200px) {
+  .wg.grid > .col-xl-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .col-xl-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .col-xl-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-xl-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .col-xl-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .col-xl-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-xl-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .col-xl-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .col-xl-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-xl-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .col-xl-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .col-xl-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .col-xl-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .col-xl-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .col-xl-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .col-xl-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .col-xl-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .col-xl-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .col-xl-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .col-xl-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .col-xl-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .col-xl-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .col-xl-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .col-xl-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .col-xl-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .col-xl-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .col-xl-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .col-xl-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .col-xl-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .col-xl-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .col-xl-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .col-xl-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-xl-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .offset-xl-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .offset-xl-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-xl-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .offset-xl-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .offset-xl-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-xl-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .offset-xl-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .offset-xl-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-xl-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .offset-xl-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .offset-xl-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .offset-xl-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .offset-xl-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .offset-xl-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .offset-xl-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .offset-xl-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .offset-xl-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .offset-xl-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .offset-xl-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .offset-xl-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .offset-xl-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .offset-xl-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .offset-xl-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .offset-xl-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .offset-xl-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .offset-xl-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .offset-xl-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .offset-xl-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .offset-xl-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .offset-xl-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .offset-xl-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-xl-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .push-xl-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .push-xl-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-xl-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .push-xl-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .push-xl-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-xl-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .push-xl-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .push-xl-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-xl-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .push-xl-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .push-xl-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .push-xl-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .push-xl-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .push-xl-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .push-xl-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .push-xl-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .push-xl-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .push-xl-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .push-xl-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .push-xl-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .push-xl-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .push-xl-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .push-xl-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .push-xl-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .push-xl-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .push-xl-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .push-xl-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .push-xl-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .push-xl-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .push-xl-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .push-xl-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-xl-1-12 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+  .wg.grid > .order-xl-2-12 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+  .wg.grid > .order-xl-3-12 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-xl-4-12 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+  .wg.grid > .order-xl-5-12 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+  .wg.grid > .order-xl-6-12 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-xl-7-12 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+  .wg.grid > .order-xl-8-12 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+  .wg.grid > .order-xl-9-12 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-xl-10-12 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+  .wg.grid > .order-xl-11-12 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+  .wg.grid > .order-xl-12-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+  .wg.grid > .order-xl-1-20 {
+    max-width: 5%;
+    flex-basis: 5%; }
+  .wg.grid > .order-xl-2-20 {
+    max-width: 10%;
+    flex-basis: 10%; }
+  .wg.grid > .order-xl-3-20 {
+    max-width: 15%;
+    flex-basis: 15%; }
+  .wg.grid > .order-xl-4-20 {
+    max-width: 20%;
+    flex-basis: 20%; }
+  .wg.grid > .order-xl-5-20 {
+    max-width: 25%;
+    flex-basis: 25%; }
+  .wg.grid > .order-xl-6-20 {
+    max-width: 30%;
+    flex-basis: 30%; }
+  .wg.grid > .order-xl-7-20 {
+    max-width: 35%;
+    flex-basis: 35%; }
+  .wg.grid > .order-xl-8-20 {
+    max-width: 40%;
+    flex-basis: 40%; }
+  .wg.grid > .order-xl-9-20 {
+    max-width: 45%;
+    flex-basis: 45%; }
+  .wg.grid > .order-xl-10-20 {
+    max-width: 50%;
+    flex-basis: 50%; }
+  .wg.grid > .order-xl-11-20 {
+    max-width: 55%;
+    flex-basis: 55%; }
+  .wg.grid > .order-xl-12-20 {
+    max-width: 60%;
+    flex-basis: 60%; }
+  .wg.grid > .order-xl-13-20 {
+    max-width: 65%;
+    flex-basis: 65%; }
+  .wg.grid > .order-xl-14-20 {
+    max-width: 70%;
+    flex-basis: 70%; }
+  .wg.grid > .order-xl-15-20 {
+    max-width: 75%;
+    flex-basis: 75%; }
+  .wg.grid > .order-xl-16-20 {
+    max-width: 80%;
+    flex-basis: 80%; }
+  .wg.grid > .order-xl-17-20 {
+    max-width: 85%;
+    flex-basis: 85%; }
+  .wg.grid > .order-xl-18-20 {
+    max-width: 90%;
+    flex-basis: 90%; }
+  .wg.grid > .order-xl-19-20 {
+    max-width: 95%;
+    flex-basis: 95%; }
+  .wg.grid > .order-xl-20-20 {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+.wg.grid.gutter-0 {
+  margin-left: 0px;
+  margin-right: 0px; }
+  .wg.grid.gutter-0 > div[class*="col-xs-"],
+  .wg.grid.gutter-0 > div[class*="col-sm-"],
+  .wg.grid.gutter-0 > div[class*="col-md-"],
+  .wg.grid.gutter-0 > div[class*="col-lg-"],
+  .wg.grid.gutter-0 > div[class*="col-xl-"] {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+.wg.grid.gutter-15 {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .wg.grid.gutter-15 > div[class*="col-xs-"],
+  .wg.grid.gutter-15 > div[class*="col-sm-"],
+  .wg.grid.gutter-15 > div[class*="col-md-"],
+  .wg.grid.gutter-15 > div[class*="col-lg-"],
+  .wg.grid.gutter-15 > div[class*="col-xl-"] {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+.wg.grid.gutter-30 {
+  margin-left: -30px;
+  margin-right: -30px; }
+  .wg.grid.gutter-30 > div[class*="col-xs-"],
+  .wg.grid.gutter-30 > div[class*="col-sm-"],
+  .wg.grid.gutter-30 > div[class*="col-md-"],
+  .wg.grid.gutter-30 > div[class*="col-lg-"],
+  .wg.grid.gutter-30 > div[class*="col-xl-"] {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+.wg.grid.gutter-60 {
+  margin-left: -60px;
+  margin-right: -60px; }
+  .wg.grid.gutter-60 > div[class*="col-xs-"],
+  .wg.grid.gutter-60 > div[class*="col-sm-"],
+  .wg.grid.gutter-60 > div[class*="col-md-"],
+  .wg.grid.gutter-60 > div[class*="col-lg-"],
+  .wg.grid.gutter-60 > div[class*="col-xl-"] {
+    padding-left: 60px;
+    padding-right: 60px; }
+
+.wg.grid.gutter-90 {
+  margin-left: -90px;
+  margin-right: -90px; }
+  .wg.grid.gutter-90 > div[class*="col-xs-"],
+  .wg.grid.gutter-90 > div[class*="col-sm-"],
+  .wg.grid.gutter-90 > div[class*="col-md-"],
+  .wg.grid.gutter-90 > div[class*="col-lg-"],
+  .wg.grid.gutter-90 > div[class*="col-xl-"] {
+    padding-left: 90px;
+    padding-right: 90px; }
