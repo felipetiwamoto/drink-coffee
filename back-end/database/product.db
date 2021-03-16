@@ -98,3 +98,4 @@
 {"name":"Nome da sobremesa 8","price":"12.04","description":"Descrição da sobremesa de numero 8...","amount":21,"category":"Sobremesa","_id":"yUq75d1k4gUKgvHE"}
 {"name":"Nome da sobremesa 1","description":"Descrição da sobremesa de numero 1...","price":"6.21","category":"Sobremesa","_id":"ylqE0bK1pAdd7Hh5"}
 {"name":"Nome da bebida 25","price":"9.51","description":"Descrição da bebida de numero 25...","amount":31,"category":"Bebida","_id":"zd00cSnGLSlHUyUc"}
+{"name":"Produto teste","description":"Descrição teste","price":"123","category":"Sobremesa","_id":"IUG48FfNHp9RvEbV"}
